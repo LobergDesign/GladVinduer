@@ -1,0 +1,77 @@
+﻿@import "../Helpers/var";
+@import "../Helpers/mixin";
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding-left: 65px;
+    padding-right: 70px;
+    background-color: white;
+    height: $header-height;
+
+    .logo-container, .navigation, .social {
+        display: inline-block;
+    }
+
+    .logo-container {
+        float: left;
+
+        img {
+            width: 100px;
+            height: auto;
+            margin: 15px 0;
+        }
+    }
+}
+
+.navigation {
+    float: right;
+    padding: 20px 0;
+
+    nav {
+        display: inline-block;
+    }
+
+    ul {
+        li {
+            display: inline-block;
+
+            &.active {
+                a {
+                    @include font-bold;
+                    color: $main-dark;
+                }
+            }
+
+            a {
+                display: inline-block;
+                @include font-light;
+                color: $gray;
+                font-size: 0.82rem;
+                padding: 12px 20px;
+            }
+        }
+    }
+}
+.social-container {
+    display: inline-block;
+    vertical-align: middle;
+
+    a {
+        &:last-of-type {
+            svg {
+                margin-bottom: -1px;
+            }
+        }
+    }
+
+    svg {
+        fill: $main-dark;
+        width: 12px;
+        height: 12px;
+        margin-left:30px;
+    }
+}

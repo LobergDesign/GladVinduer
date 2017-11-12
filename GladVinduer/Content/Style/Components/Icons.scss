@@ -1,0 +1,23 @@
+﻿@import "../Helpers/var";
+@import "../Helpers/mixin";
+
+.arrow-icon{
+    display:inline-block;
+    svg{
+        width: 20px;
+        height: 20px;
+        fill:$white;
+    }
+    &.left{
+        transform: rotate(180deg);
+    }
+}
+.launch-icon {
+    display: inline-block;
+    transform:rotate(180deg);
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: $white;
+    }
+}

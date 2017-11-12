@@ -1,0 +1,8 @@
+﻿@import "../Helpers/var";
+@import "../Helpers/mixin";
+
+.img-overlay {
+    position: absolute;
+    @include all-sides;
+    background: rgba($main-dark, 0.65);
+}

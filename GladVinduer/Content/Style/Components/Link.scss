@@ -1,0 +1,62 @@
+﻿@import "../Helpers/var";
+@import "../Helpers/mixin";
+
+a, span {
+    &.main-link {
+        @include font-semibold;
+        display: inline-block;
+        color: $main-dark;
+        font-size: 0.8rem;
+
+        &:hover {
+            &::before {
+                width: 25px;
+            }
+        }
+
+        &::before {
+            display: inline-block;
+            content: '';
+            width: 15px;
+            margin-right: 8px;
+            height: 1px;
+            background-color: $main-dark;
+            vertical-align: middle;
+            transition: $transition;
+        }
+
+        &.white {
+            color: $white;
+
+            &::before {
+                background-color: $white;
+            }
+        }
+    }
+}
+
+p {
+    a {
+        @include font-semibold;
+        display: block;
+        color: inherit;
+        font-size: 0.8rem;
+
+        &:hover {
+            &::before {
+                width: 25px;
+            }
+        }
+
+        &::before {
+            display: inline-block;
+            content: '';
+            width: 15px;
+            margin-right: 8px;
+            height: 1px;
+            background-color: white;
+            vertical-align: middle;
+            transition: $transition;
+        }
+    }
+}

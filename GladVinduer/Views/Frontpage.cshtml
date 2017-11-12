@@ -1,0 +1,57 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.FrontPage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="top-section">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="top-section-left">
+                    <span>@Model.Content.Headline</span>
+                    <h1>
+                        @Model.Content.HeadlineSecond
+                    </h1>
+                </div>
+            </div>
+
+            <div class="col-sm-5">
+                <div class="top-section-right">
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <p>@Model.Content.EnvironmentFirst</p>
+                        </div>
+                        <div class="col-xs-5">
+                            <p>@Model.Content.EnvironmentSecond</p>
+                        </div>
+                        <div class="col-xs-2 items-right">
+                            <img src="@Model.Content.EnvironmentImage.Url" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("_FrontpageCarousel")
+<div class="container">
+    <div class="custom-grid-section">
+        <div class="first-section">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <h2>@Model.Content.AboutHeadline</h2>
+                </div>
+                <div class="col-sm-7 col-sm-push-1 col-xs-12">
+                    @Model.Content.AboutBodytext
+                    <a class="main-link" href="@Model.Content.AboutLink.Url">Læs mere</a>
+                </div>
+            </div>
+        </div>
+        @Html.Partial("_Services")
+    </div>
+</div>
+<div class="grid">
+    @CurrentPage.GetGridHtml("gridContent")
+</div>

@@ -1,0 +1,27 @@
+﻿@import "../Helpers/var";
+@import "../Helpers/mixin";
+
+.service-blocks {
+    .service-links {
+        &:hover {
+            span {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        h4 {
+        }
+
+        p {
+            color: $gray;
+            font-size: 0.75rem;
+        }
+
+        span {
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: $transition;
+        }
+    }
+}

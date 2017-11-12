@@ -1,0 +1,37 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="@Umbraco.Field("metaDescription")" />
+    <meta name="keywords" content="@Umbraco.Field("metaKeywords")" />
+    <title>@Umbraco.Field("pageName")</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700" rel="stylesheet">
+    <link href="~/Content/Style/Other/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Style/Other/normalize.css" rel="stylesheet" />
+    <link href="~/Content/Style/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <div class="logo-container">
+                <a href="/"><img src="~/Content/Img/Glad_logo_gron.png" /></a>
+            </div>
+            <div class="navigation">
+                @Html.Partial("_Navigation")
+            </div>
+         
+        </header>
+        <div class="main-setion">
+            @RenderBody()
+        </div>
+    </div>
+    @Html.Partial("_Sprite")
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Custom/Custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿@import "../Helpers/mixin";
+@import "../Helpers/var";
+
+$section-height: 75vh;
+.fullwidth {
+
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        .row {
+            margin: 0;
+
+            > div {
+                height: $section-height;
+                padding: 0;
+                background-color: $green;
+
+                > div {
+                    @include cover;
+                    height: $section-height;
+
+                    &.center-content {
+                        @include center;
+                        height: auto;
+                        max-width:60%;
+                        h2, p {
+                            color: white;
+                        }
+                        h2{
+                            margin-bottom:25px;
+                        }
+                        a{
+                            margin-top: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.fullwidth-tinted {
+    background-color: $white-faded;
+    padding:100px 0;
+    h2{
+        padding-right:20%;
+    }
+    a{
+        color: $main-dark;
+        &::before{
+            background-color:$main-dark;
+        }
+    }
+    h3{
+        margin-top:-8px;
+        margin-bottom:30px;
+    }
+}
+
+.green {
+    background-color: $green;
+}
+.umb-grid {
+    .img-overlay {
+        position:relative;
+        &::after {
+            content: '';
+            position: absolute;
+            @include all-sides;
+            background: rgba($main-dark, 0.4);
+        }
+    }
+}

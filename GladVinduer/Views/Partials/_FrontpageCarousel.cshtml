@@ -1,0 +1,46 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+    @{ 
+        var selection = CurrentPage.Site().FirstChild("frontpageCarousel").Children("carouselItem").Where("Visible");
+    }
+
+
+<div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+       
+        @foreach (var item in selection)
+        {
+            <div class="item cover @item.IsFirst("active")" style="background-image: url(' @item.carouselImage.Url');">
+                <div class="img-overlay"></div>
+                <div class="carousel-caption">
+                    <div class="caption-content">
+                        @item.Carouselheadline
+                        @if (item.HasValue("carouselLink"))
+                        {
+                            <a class="main-link white" href="@item.carouselLink.Url">Læs mere</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <a class="left-icon" href="#myCarousel" data-slide="prev">
+        <div class="hover-boks">
+            <span>Forrige</span>
+        </div>
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-arrow" />
+            </svg>
+        </span>
+    </a>
+    <a class="right-icon" href="#myCarousel" data-slide="next">
+        <div class="hover-boks">
+            <span>Næste</span>
+        </div>
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-arrow" />
+            </svg>
+        </span>
+    </a>
+</div>

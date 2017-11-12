@@ -1,0 +1,43 @@
+﻿@import "../Helpers/var";
+@import "../Helpers/mixin";
+
+.main-setion {
+    margin-top: $header-height;
+}
+
+.top-section {
+    margin: 100px 50px 40px;
+
+    .top-section-left {
+        span, h1 {
+            @include font-bold;
+            font-size: 2rem;
+        }
+
+        h1 {
+            @include font-light;
+            margin:0;
+            padding-top:4px;
+        }
+    }
+
+    .top-section-right {
+        img {
+            width: 55px;
+        }
+
+        p {
+            @include font-light;
+            color: $gray;
+            font-size: 0.8rem;
+            padding-right: 20%;
+            line-height: 1.8;
+        }
+    }
+}
+.custom-grid-section {
+    padding: 100px 0;
+}
+.first-section{
+    margin: 50px 0 120px;
+}

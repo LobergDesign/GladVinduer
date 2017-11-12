@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    var sectionItems = CurrentPage.Site().FirstChild("frontpageFirstSection").Children("firstSectionItem");
+
+}
+
+
+<div class="row service-blocks">
+    @foreach (var item in sectionItems)
+            {
+        <a class="service-links" href="@item.Link.Url">
+            <div class="col-sm-3">
+                <h4>@item.Headline</h4>
+                <p>@item.BodyText</p>
+                <span class="main-link">Læs mere</span>
+            </div>
+        </a>
+    }
+</div>

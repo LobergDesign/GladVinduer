@@ -1,0 +1,88 @@
+﻿@import "../Helpers/mixin";
+@import "../Helpers/var";
+
+html {
+    font-size: 16px;
+}
+
+body {
+    @include font-regular;
+}
+
+h1, h2, h3, h4 {
+    color: $main-dark;
+    line-height: 1;
+}
+
+h1 {
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.4;
+
+    p {
+        @include font-light;
+        line-height: 1.4;
+        color: $main-dark;
+    }
+}
+h3 {
+    @include font-semibold;
+    font-size: 1.1rem;
+}
+h4{
+    font-size: 0.85rem;
+    @include font-semibold;
+}
+
+p, span {
+    @include font-regular;
+}
+
+p {
+    @include font-ExtraLight;
+    line-height: 2;
+    color: $gray;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.cover {
+    @include cover;
+}
+
+strong {
+    @include font-bold;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.items-right {
+    text-align: right;
+}
+
+.center-items {
+    text-align: center;
+}

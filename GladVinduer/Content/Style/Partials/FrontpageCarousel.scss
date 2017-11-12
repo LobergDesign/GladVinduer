@@ -1,0 +1,131 @@
+﻿@import "../Helpers/var";
+@import "../Helpers/mixin";
+
+.carousel {
+    overflow: hidden;
+
+    .carousel-inner {
+        .item {
+            height: 65vh;
+
+            &.active {
+                .carousel-caption {
+                    opacity: 1;
+
+                    .caption-content {
+                        transform: translateX(0);
+                    }
+                }
+            }
+
+            .carousel-caption {
+                @include center;
+                bottom: auto;
+                right: auto;
+                padding: 0;
+                margin: 0;
+                text-align: left;
+                opacity: 0;
+                transition: $transition;
+
+                .caption-content {
+                    transform: translateX(-15px);
+                    transition: $transition;
+
+                    p {
+                        color: $white;
+                        text-align: left;
+                        @include font-light;
+                        font-size: 2rem;
+                        line-height: 1;
+                        margin-bottom: 6px;
+                    }
+
+                    a {
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .left-icon, .right-icon {
+        @include center-y;
+        z-index: 4;
+        right: 0;
+        width: 27px;
+        text-align: left;
+        padding-left: 6px;
+
+        &:hover {
+            .hover-boks {
+                transform: translateX(0);
+
+                span {
+                    transition-delay: 0.1s;
+                    opacity: 1;
+                }
+            }
+        }
+
+        span {
+            display: inline-block;
+
+            svg {
+                width: 14px;
+                height: 14px;
+                fill: $main-dark;
+                vertical-align: middle;
+            }
+        }
+
+        .hover-boks {
+            position: absolute;
+            right: 0;
+            top: -3px;
+            height: 30px;
+            width: 100px;
+            background-color: $white;
+            z-index: -1;
+            transform: translateX(70px);
+            transition: $transition;
+
+            span {
+                position: absolute;
+                left: 10px;
+                top: 6px;
+                color: $main-dark;
+                @include font-light;
+                font-size: 0.8rem;
+                opacity: 0;
+                transition: $transition;
+                transition-delay: 0s;
+            }
+        }
+    }
+
+    .left-icon {
+        left: 0;
+        padding-left: 7px;
+
+        span {
+            transform: rotate(180deg);
+
+            svg {
+                vertical-align: unset;
+            }
+        }
+
+        .hover-boks {
+            transform: translateX(-70px);
+            left: 0;
+            right: auto;
+
+            span {
+                transform: none;
+                left: auto;
+                right: 10px;
+            }
+        }
+    }
+}
