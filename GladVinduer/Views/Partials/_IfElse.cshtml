@@ -1,0 +1,38 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@if (CurrentPage.showContactSection)
+{
+    <div class="fullwidth-tinted" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 data-show-visible">
+                        <h2><strong>Kontakt os</strong> allerede idag og lad os få en snak</h2>
+                        <p><a  href="/" class="main-link" title="Forside">Her pudser vi</a></p>
+                </div>
+                <div class="col-md-6 contact-right-side data-show-visible">
+                        <p><span class="light-gray">Telefon</span></p>
+                        <h3>+45 53 83 34 66</h3>
+                        <p><span class="light-gray">Email</span></p>
+                        <a href="mailto:morten@gladvinduer.dk">morten@gladvinduer.dk</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@if (CurrentPage.showMobilepay)
+{
+    <div class="payment">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 data-show-visible">
+                    <img class="mobilepay" src="~/Content/Img/Icons/MobilePay_Logo.png" />
+                </div>
+                <div class="col-md-6 data-show-visible">
+                    <h2>Vi tager også <br />imod <strong>mobilepay</strong></h2>
+                    <p><a class="main-link" href="/" title="Forside">Læs mere om betalingsmuligheder</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+}

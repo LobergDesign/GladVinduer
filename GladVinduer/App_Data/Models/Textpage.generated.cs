@@ -20,16 +20,16 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Umbraco.Web.PublishedContentModels
 {
-	/// <summary>Frontpage</summary>
-	[PublishedContentModel("frontPage")]
-	public partial class FrontPage : PublishedContentModel, IGrid, ISEO, IVisEkstraSection
+	/// <summary>Textpage</summary>
+	[PublishedContentModel("textpage")]
+	public partial class Textpage : PublishedContentModel, IGrid, ISEO, IVisEkstraSection
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "frontPage";
+		public new const string ModelTypeAlias = "textpage";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
-		public FrontPage(IPublishedContent content)
+		public Textpage(IPublishedContent content)
 			: base(content)
 		{ }
 
@@ -40,99 +40,27 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 #pragma warning restore 0109
 
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<FrontPage, TValue>> selector)
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Textpage, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
 
 		///<summary>
-		/// AboutBodytext
+		/// Banner headline
 		///</summary>
-		[ImplementPropertyType("aboutBodytext")]
-		public IHtmlString AboutBodytext
+		[ImplementPropertyType("bannerHeadline")]
+		public string BannerHeadline
 		{
-			get { return this.GetPropertyValue<IHtmlString>("aboutBodytext"); }
+			get { return this.GetPropertyValue<string>("bannerHeadline"); }
 		}
 
 		///<summary>
-		/// AboutHeadline
+		/// Banner image
 		///</summary>
-		[ImplementPropertyType("aboutHeadline")]
-		public IHtmlString AboutHeadline
+		[ImplementPropertyType("bannerImage")]
+		public IPublishedContent BannerImage
 		{
-			get { return this.GetPropertyValue<IHtmlString>("aboutHeadline"); }
-		}
-
-		///<summary>
-		/// AboutLink
-		///</summary>
-		[ImplementPropertyType("aboutLink")]
-		public IPublishedContent AboutLink
-		{
-			get { return this.GetPropertyValue<IPublishedContent>("aboutLink"); }
-		}
-
-		///<summary>
-		/// Environment first
-		///</summary>
-		[ImplementPropertyType("environmentFirst")]
-		public string EnvironmentFirst
-		{
-			get { return this.GetPropertyValue<string>("environmentFirst"); }
-		}
-
-		///<summary>
-		/// Environment image
-		///</summary>
-		[ImplementPropertyType("environmentImage")]
-		public IPublishedContent EnvironmentImage
-		{
-			get { return this.GetPropertyValue<IPublishedContent>("environmentImage"); }
-		}
-
-		///<summary>
-		/// Environment second
-		///</summary>
-		[ImplementPropertyType("environmentSecond")]
-		public string EnvironmentSecond
-		{
-			get { return this.GetPropertyValue<string>("environmentSecond"); }
-		}
-
-		///<summary>
-		/// First toggle
-		///</summary>
-		[ImplementPropertyType("firsToggle")]
-		public string FirsToggle
-		{
-			get { return this.GetPropertyValue<string>("firsToggle"); }
-		}
-
-		///<summary>
-		/// Headline second
-		///</summary>
-		[ImplementPropertyType("headlineSecond")]
-		public string HeadlineSecond
-		{
-			get { return this.GetPropertyValue<string>("headlineSecond"); }
-		}
-
-		///<summary>
-		/// Second toggle
-		///</summary>
-		[ImplementPropertyType("secondToggle")]
-		public string SecondToggle
-		{
-			get { return this.GetPropertyValue<string>("secondToggle"); }
-		}
-
-		///<summary>
-		/// Third toggle
-		///</summary>
-		[ImplementPropertyType("thirdToggle")]
-		public string ThirdToggle
-		{
-			get { return this.GetPropertyValue<string>("thirdToggle"); }
+			get { return this.GetPropertyValue<IPublishedContent>("bannerImage"); }
 		}
 
 		///<summary>

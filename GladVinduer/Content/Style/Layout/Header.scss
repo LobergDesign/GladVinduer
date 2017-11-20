@@ -6,11 +6,34 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 5;
     padding-left: 65px;
     padding-right: 70px;
     background-color: white;
     height: $header-height;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transition: 0.32s $cubic;
+
+    &.scroll {
+        height: ($header-height - 15px);
+
+
+        &::after {
+            width: 100%;
+        }
+
+        .navigation {
+            padding: 12px 0;
+        }
+
+        .logo-container {
+            img {
+                width: 80px;
+                margin: 15px 0;
+            }
+        }
+    }
 
     .logo-container, .navigation, .social {
         display: inline-block;
@@ -21,8 +44,8 @@ header {
 
         img {
             width: 100px;
-            height: auto;
-            margin: 15px 0;
+            margin: 20px 0;
+            transition: 0.32s $cubic;
         }
     }
 }
@@ -30,6 +53,7 @@ header {
 .navigation {
     float: right;
     padding: 20px 0;
+    transition: 0.32s $cubic;
 
     nav {
         display: inline-block;
@@ -48,14 +72,20 @@ header {
 
             a {
                 display: inline-block;
-                @include font-light;
+                @include font-regular;
                 color: $gray;
-                font-size: 0.82rem;
+                font-size: 0.8rem;
                 padding: 12px 20px;
+                transition: $transition;
+
+                &:hover {
+                    color: $main-dark;
+                }
             }
         }
     }
 }
+
 .social-container {
     display: inline-block;
     vertical-align: middle;
@@ -72,6 +102,6 @@ header {
         fill: $main-dark;
         width: 12px;
         height: 12px;
-        margin-left:30px;
+        margin-left: 30px;
     }
 }

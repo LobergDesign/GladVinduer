@@ -10,3 +10,7 @@ h3{font-size: 1rem;}
 /**umb_name:light-gray*/
 .light-gray{color: #b2b1b1;
 font-size: 0.75rem;}
+
+/**umb_name:Custom link style*/
+.main-link{color: white;
+font-size: 0.8rem;}

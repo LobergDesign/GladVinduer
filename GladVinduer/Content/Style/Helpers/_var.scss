@@ -2,7 +2,7 @@
 $white: #ffffff;
 $white-faded: #f5f6f6;
 $main-dark: #121212;
-$light-gray: #1a1a1a;
+/*$light-gray: #1a1a1a;*/
 
 
 $green: #313c40;
@@ -11,11 +11,11 @@ $gray: #b2b1b1;
 // Layout
 $header-height: 80px;
 //transitions
-$count: 7;
-$cubic: cubic-bezier(0.785,.135,.15,.86);
-$transition: 0.4s $cubic;
+$count: 5;
+$cubic: cubic-bezier(.215,.61,.355,1);
+$transition: 0.55s $cubic;
 
-$shadow: 0px 0px 62px 0px rgba(1, 1, 0, 0.1);
+$shadow: 0px 0px 35px 0px rgba(1, 1, 0, 0.06);
 
 // Breakpoints
 $extra-small: 767px;

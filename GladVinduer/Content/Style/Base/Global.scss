@@ -7,6 +7,8 @@ html {
 
 body {
     @include font-regular;
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3, h4 {
@@ -15,29 +17,44 @@ h1, h2, h3, h4 {
 }
 
 h1 {
+    @include font-semibold;
+    font-size: 2.1rem;
+    color: white;
+    line-height: 1.4;
 }
 
 h2 {
+    @include font-light;
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.58rem;
     line-height: 1.4;
 
     p {
+        font-size: 1.58rem;
         @include font-light;
         line-height: 1.4;
         color: $main-dark;
+
+        strong {
+            @include font-semibold;
+            font-size: 1.58rem;
+            color: $main-dark;
+        }
     }
 }
+
 h3 {
     @include font-semibold;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
-h4{
+
+h4 {
     font-size: 0.85rem;
     @include font-semibold;
 }
 
 p, span {
+    font-size: 0.875rem;
     @include font-regular;
 }
 
@@ -45,6 +62,12 @@ p {
     @include font-ExtraLight;
     line-height: 2;
     color: $gray;
+
+    strong, b {
+        font-size: 0.875rem;
+        @include font-semibold;
+        color: $main-dark;
+    }
 }
 
 a {
@@ -56,6 +79,7 @@ a {
         color: $white;
     }
 }
+
 
 ul {
     padding: 0;
@@ -85,4 +109,27 @@ img {
 
 .center-items {
     text-align: center;
+}
+
+
+$effect: 10;
+
+.data-show-visible{
+    opacity: 0;
+    transform: translateX(-25px);
+    transition: 1s $cubic;
+
+
+    @for $i from 1 through $effect {
+
+        &:nth-child(#{$i}) {
+            transition-delay: $i * 0.1s;
+        }
+    }
+}
+
+
+.done {
+    opacity: 1;
+    transform: translateX(0);
 }

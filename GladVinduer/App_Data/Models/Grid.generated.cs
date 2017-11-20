@@ -20,16 +20,24 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Umbraco.Web.PublishedContentModels
 {
-	/// <summary>Frontpage Carousel</summary>
-	[PublishedContentModel("frontpageCarousel")]
-	public partial class FrontpageCarousel : PublishedContentModel, IHideInNav
+	// Mixin content Type 1080 with alias "grid"
+	/// <summary>Grid</summary>
+	public partial interface IGrid : IPublishedContent
+	{
+		/// <summary>Grid content</summary>
+		Newtonsoft.Json.Linq.JToken GridContent { get; }
+	}
+
+	/// <summary>Grid</summary>
+	[PublishedContentModel("grid")]
+	public partial class Grid : PublishedContentModel, IGrid
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "frontpageCarousel";
+		public new const string ModelTypeAlias = "grid";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
-		public FrontpageCarousel(IPublishedContent content)
+		public Grid(IPublishedContent content)
 			: base(content)
 		{ }
 
@@ -40,18 +48,21 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 #pragma warning restore 0109
 
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<FrontpageCarousel, TValue>> selector)
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Grid, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
 
 		///<summary>
-		/// Hide in menu?
+		/// Grid content
 		///</summary>
-		[ImplementPropertyType("umbracoNaviHide")]
-		public bool UmbracoNaviHide
+		[ImplementPropertyType("gridContent")]
+		public Newtonsoft.Json.Linq.JToken GridContent
 		{
-			get { return Umbraco.Web.PublishedContentModels.HideInNav.GetUmbracoNaviHide(this); }
+			get { return GetGridContent(this); }
 		}
+
+		/// <summary>Static getter for Grid content</summary>
+		public static Newtonsoft.Json.Linq.JToken GetGridContent(IGrid that) { return that.GetPropertyValue<Newtonsoft.Json.Linq.JToken>("gridContent"); }
 	}
 }

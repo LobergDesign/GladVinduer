@@ -10,7 +10,7 @@
         @if (oneColumn)
         {
             foreach (var section in Model.sections) {
-                <div class="grid-section test">
+                <div class="grid-section">
                     @foreach (var row in section.rows) {
                         @renderRow(row, true);
                     }

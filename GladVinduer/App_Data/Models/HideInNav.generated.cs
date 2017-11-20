@@ -25,7 +25,7 @@ namespace Umbraco.Web.PublishedContentModels
 	public partial interface IHideInNav : IPublishedContent
 	{
 		/// <summary>Hide in menu?</summary>
-		bool HideInUmbracoMenu { get; }
+		bool UmbracoNaviHide { get; }
 	}
 
 	/// <summary>Hide in nav</summary>
@@ -56,13 +56,13 @@ namespace Umbraco.Web.PublishedContentModels
 		///<summary>
 		/// Hide in menu?
 		///</summary>
-		[ImplementPropertyType("hideInUmbracoMenu")]
-		public bool HideInUmbracoMenu
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide
 		{
-			get { return GetHideInUmbracoMenu(this); }
+			get { return GetUmbracoNaviHide(this); }
 		}
 
 		/// <summary>Static getter for Hide in menu?</summary>
-		public static bool GetHideInUmbracoMenu(IHideInNav that) { return that.GetPropertyValue<bool>("hideInUmbracoMenu"); }
+		public static bool GetUmbracoNaviHide(IHideInNav that) { return that.GetPropertyValue<bool>("umbracoNaviHide"); }
 	}
 }

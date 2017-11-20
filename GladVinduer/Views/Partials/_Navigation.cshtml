@@ -1,23 +1,19 @@
-﻿<nav>
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+<!-- Navbar -->
+<nav>
     <ul>
-        <li class="active">
-            <a href="#">Forside</a>
+        <li class="@((Model.Content.IsAncestorOrSelf(Model.Content.Site())) ? "active" : "")">
+            <a href="/">Forside</a>
         </li>
-        <li>
-            <a href="#">Om os</a>
-        </li>
-        <li>
-            <a href="#">Vinduespolering</a>
-        </li>
-        <li>
-            <a href="#">Andre services</a>
-        </li>
-        <li>
-            <a href="#">Priser og betaling</a>
-        </li>
-        <li>
-            <a href="#">Kontakt</a>
-        </li>
+        @{ var allPages = Model.Content.Site().Children.Where(x => x.IsVisible());}
+        @foreach (var page in allPages)
+            {
+
+            <li class="@((page.IsAncestorOrSelf(Model.Content)) ? "active" : "")">
+                <a href="@page.Url">@page.Name</a>
+            </li>
+        }
     </ul>
 </nav>
 <div class="social-container">
@@ -32,3 +28,5 @@
         </svg>
     </a>
 </div>
+
+

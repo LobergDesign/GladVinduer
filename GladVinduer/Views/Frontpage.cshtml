@@ -8,8 +8,14 @@
     <div class="top-section">
         <div class="row">
             <div class="col-sm-7">
-                <div class="top-section-left">
-                    <span>@Model.Content.Headline</span>
+                <div class="top-section-left data-show-visible">
+                   <div class="toggle-word" data-word-toggle>
+                       <div class="show-1">
+                           <span>@Model.Content.FirsToggle</span>
+                           <span>@Model.Content.SecondToggle</span>
+                           <span>@Model.Content.ThirdToggle</span>
+                       </div>
+                   </div>
                     <h1>
                         @Model.Content.HeadlineSecond
                     </h1>
@@ -17,7 +23,7 @@
             </div>
 
             <div class="col-sm-5">
-                <div class="top-section-right">
+                <div class="top-section-right data-show-visible">
                     <div class="row">
                         <div class="col-xs-5">
                             <p>@Model.Content.EnvironmentFirst</p>
@@ -40,10 +46,10 @@
     <div class="custom-grid-section">
         <div class="first-section">
             <div class="row">
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-sm-4 col-xs-12 data-show-visible">
                     <h2>@Model.Content.AboutHeadline</h2>
                 </div>
-                <div class="col-sm-7 col-sm-push-1 col-xs-12">
+                <div class="col-sm-7 col-sm-push-1 col-xs-12 data-show-visible">
                     @Model.Content.AboutBodytext
                     <a class="main-link" href="@Model.Content.AboutLink.Url">Læs mere</a>
                 </div>

@@ -2,7 +2,11 @@
 @import "../Helpers/var";
 
 $section-height: 75vh;
-.fullwidth {
+
+.fullwidth, .fullwidth-small, .fullwidth-small-white {
+    &:nth-of-type(2) {
+        margin-top: 80px;
+    }
 
     .container {
         width: 100%;
@@ -24,14 +28,17 @@ $section-height: 75vh;
                     &.center-content {
                         @include center;
                         height: auto;
-                        max-width:60%;
-                        h2, p {
+                        max-width: 60%;
+
+                        h2, p, h3 {
                             color: white;
                         }
-                        h2{
-                            margin-bottom:25px;
+
+                        h2 {
+                            margin-bottom: 25px;
                         }
-                        a{
+
+                        a {
                             margin-top: 25px;
                         }
                     }
@@ -40,35 +47,170 @@ $section-height: 75vh;
         }
     }
 }
-.fullwidth-tinted {
-    background-color: $white-faded;
-    padding:100px 0;
-    h2{
-        padding-right:20%;
-    }
-    a{
-        color: $main-dark;
-        &::before{
-            background-color:$main-dark;
+
+.fullwidth-small, .fullwidth-small-white {
+    .center-content {
+        h3 {
+            color: white;
         }
     }
-    h3{
-        margin-top:-8px;
-        margin-bottom:30px;
+
+    &:nth-last-of-type(2) {
+        margin-top: 80px;
+    }
+
+    .container {
+        .row {
+            > div {
+                height: 400px;
+
+                > div {
+                    @include cover;
+                    height: 400px;
+                }
+            }
+        }
     }
 }
 
-.green {
-    background-color: $green;
+.fullwidth-small-white {
+
+    .container {
+        .row {
+            > div {
+                background-color: white;
+
+                > div {
+                    &.center-content {
+                        h3, h2, a {
+                            color: $main-dark;
+                        }
+                        p{
+                            color:$gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
+.fullwidth-tinted {
+    background-color: $white-faded;
+    padding: 100px 0;
+
+    h2 {
+        padding-right: 38%;
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: $main-dark;
+
+        &::before {
+            background-color: $main-dark;
+        }
+    }
+
+    h3 {
+        margin-top: -8px;
+        margin-bottom: 30px;
+    }
+
+    .contact-right-side {
+        a {
+            @include font-semibold;
+            margin-top: -8px;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            display: block;
+        }
+    }
+}
+
+.medium-split-white {
+    margin-bottom: 25px;
+
+    .container {
+        .row {
+
+            > div {
+                height: 400px;
+
+                > div {
+                    @include cover;
+                    height: 400px;
+
+                    &.center-content {
+                        @include center;
+                        height: auto;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*.green {
+    background-color: $green;
+}*/
+
 .umb-grid {
     .img-overlay {
-        position:relative;
+        position: relative;
+
         &::after {
             content: '';
             position: absolute;
             @include all-sides;
             background: rgba($main-dark, 0.4);
+        }
+    }
+
+    p {
+        a {
+            @include font-regular;
+            color: $gray;
+            text-decoration: underline;
+            transition: $transition;
+
+            &:hover {
+                color: $main-dark;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.payment {
+    padding: 100px 0;
+
+    .mobilepay {
+        width: 180px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+}
+
+.main-pages {
+    padding: 80px 0 40px;
+
+    .grid-section {
+        h2 {
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        img {
+            margin-top: 20px;
+            margin-bottom: 45px;
         }
     }
 }

@@ -10,11 +10,15 @@ a, span {
 
         &:hover {
             &::before {
-                width: 25px;
+                width: 0;
+            }
+
+            &::after {
+                width: 15px;
             }
         }
 
-        &::before {
+        &::before, &::after {
             display: inline-block;
             content: '';
             width: 15px;
@@ -25,38 +29,63 @@ a, span {
             transition: $transition;
         }
 
+        &::after {
+            margin-right: 0;
+            margin-left: 8px;
+            width: 0;
+            overflow: hidden;
+        }
+
         &.white {
             color: $white;
 
-            &::before {
+            &::before, &::after {
                 background-color: $white;
             }
         }
     }
 }
 
-p {
-    a {
-        @include font-semibold;
-        display: block;
-        color: inherit;
-        font-size: 0.8rem;
+.umb-grid {
+    p {
+        a, span {
+            &.main-link {
+                color: white;
+                text-decoration: none;
 
-        &:hover {
-            &::before {
-                width: 25px;
+                a, span {
+                    color: white;
+                    text-decoration: none;
+                }
+
+                &::before, &::after {
+                    background-color: white;
+                }
+
+                &:hover {
+                    color: white;
+                    text-decoration: none;
+                }
             }
         }
 
-        &::before {
-            display: inline-block;
-            content: '';
-            width: 15px;
-            margin-right: 8px;
-            height: 1px;
-            background-color: white;
-            vertical-align: middle;
-            transition: $transition;
+        &.main-link {
+            color: white;
+            text-decoration: none;
+
+            a, span {
+                color: white;
+                text-decoration: none;
+            }
+
+            &::before, &::after {
+                background-color: white;
+            }
+
+            &:hover {
+                color: white;
+                text-decoration: none;
+            }
         }
     }
 }

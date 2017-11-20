@@ -15,19 +15,36 @@
     <link href="~/Content/Style/styles.css" rel="stylesheet" />
 </head>
 <body>
+
+        <div class="load-overlay" data-custom-loader>
+            <div class="overlay-content">
+                <img src="~/Content/Img/svg-logo-gron.svg" alt="glad-vinder" />
+                <div class="custom-spinners">
+                    <span class="before-after"></span>
+                </div>
+            </div>
+        </div>
+   
+
     <div class="main-container">
-        <header>
+        <header data-headline-effect>
             <div class="logo-container">
-                <a href="/"><img src="~/Content/Img/Glad_logo_gron.png" /></a>
+                <a href="/">
+                    <img src="~/Content/Img/svg-logo-gron.svg" />
+                </a>
             </div>
             <div class="navigation">
                 @Html.Partial("_Navigation")
             </div>
-         
+
         </header>
         <div class="main-setion">
             @RenderBody()
+           @Html.Partial("_IfElse")
         </div>
+        <footer>
+            @Html.Partial("_Footer")
+        </footer>
     </div>
     @Html.Partial("_Sprite")
     <script src="~/Scripts/jquery-1.9.1.min.js"></script>

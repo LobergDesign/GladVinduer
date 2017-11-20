@@ -48,10 +48,10 @@ namespace Umbraco.Web.PublishedContentModels
 		///<summary>
 		/// Hide in menu?
 		///</summary>
-		[ImplementPropertyType("hideInUmbracoMenu")]
-		public bool HideInUmbracoMenu
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide
 		{
-			get { return Umbraco.Web.PublishedContentModels.HideInNav.GetHideInUmbracoMenu(this); }
+			get { return Umbraco.Web.PublishedContentModels.HideInNav.GetUmbracoNaviHide(this); }
 		}
 	}
 }
