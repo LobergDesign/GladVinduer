@@ -13,13 +13,15 @@
 .load-overlay {
     position: fixed;
     @include all-sides;
+    width: 100%;
+    height: 100%;
     background-color: $white;
-    z-index: 10;
-    transition: $transition;
+    z-index: 9999;
     visibility: visible;
     transform: translateX(0);
+    transition: $transition;
     transition-delay: 1.5s;
-
+     
     &.fade-out {
         transform: translateX(100%);
         visibility: hidden;

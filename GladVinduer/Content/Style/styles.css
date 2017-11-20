@@ -1,4 +1,154 @@
 ﻿/*$light-gray: #1a1a1a;*/
+/*$light-gray: #1a1a1a;*/
+@font-face {
+  font-family: 'Montserrat-ExtraLight';
+  src: url("/Content/Fonts/Montserrat-ExtraLight.otf") format("opentype"), url("/Content/Fonts/Montserrat-ExtraLight.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-ExtraLight.woff") format("woff"), url("/Content/Fonts/Montserrat-ExtraLight.ttf") format("truetype"), url("/Content/Fonts/Montserrat-ExtraLight.svg#svgFontName") format("svg"); }
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url("/Content/Fonts/Montserrat-Light.otf") format("opentype"), url("/Content/Fonts/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-Light.woff") format("woff"), url("/Content/Fonts/Montserrat-Light.ttf") format("truetype"), url("/Content/Fonts/Montserrat-Light.svg#svgFontName") format("svg"); }
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("/Content/Fonts/Montserrat-Regular.otf") format("opentype"), url("/Content/Fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-Regular.woff") format("woff"), url("/Content/Fonts/Montserrat-Regular.ttf") format("truetype"), url("/Content/Fonts/Montserrat-Regular.svg#svgFontName") format("svg"); }
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url("/Content/Fonts/Montserrat-SemiBold.otf") format("opentype"), url("/Content/Fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-SemiBold.woff") format("woff"), url("/Content/Fonts/Montserrat-SemiBold.ttf") format("truetype"), url("/Content/Fonts/Montserrat-SemiBold.svg#svgFontName") format("svg"); }
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url("/Content/Fonts/Montserrat-Bold.otf") format("opentype"), url("/Content/Fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-Bold.woff") format("woff"), url("/Content/Fonts/Montserrat-Bold.ttf") format("truetype"), url("/Content/Fonts/Montserrat-Bold.svg#svgFontName") format("svg"); }
+
+/*$font: 'Fira Sans';
+
+@mixin font-light {
+    font-family: $font, sans-serif;
+    font-weight: 300;
+}
+@mixin font-regular {
+    font-family: $font sans-serif;
+    font-weight: 400;
+}
+@mixin font-semibold {
+    font-family: $font, sans-serif;
+    font-weight: 500;
+}
+@mixin font-bold {
+    font-family: $font, sans-serif;
+    font-weight: 700;
+}*/
+.img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(18, 18, 18, 0.65); }
+
+.load-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 9999;
+  visibility: visible;
+  transform: translateX(0);
+  transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-delay: 1.5s; }
+  .load-overlay.fade-out {
+    transform: translateX(100%);
+    visibility: hidden; }
+    .load-overlay.fade-out .overlay-content img {
+      opacity: 0; }
+    .load-overlay.fade-out .overlay-content .custom-spinners {
+      opacity: 0; }
+  .load-overlay .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .load-overlay .overlay-content img {
+      width: 200px;
+      transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1);
+      opacity: 1;
+      transition-delay: 1s; }
+
+.custom-spinners {
+  width: 100px;
+  height: 2px;
+  overflow: hidden;
+  margin: 15px auto;
+  transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1);
+  opacity: 1;
+  transition-delay: 0.5s; }
+  .custom-spinners .before-after {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .custom-spinners .before-after::after, .custom-spinners .before-after::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      background-color: #121212;
+      transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1);
+      /*-webkit-animation: custom-effect 5s infinite;*/
+      animation: custom-effect 5s infinite; }
+    .custom-spinners .before-after::after {
+      top: 1px;
+      animation: custom-effect-reverse 5s infinite; }
+
+/* Standard syntax */
+@keyframes custom-effect {
+  0% {
+    transform: translateX(0); }
+  25% {
+    transform: translateX(100%); }
+  50% {
+    transform: translateX(0); }
+  75% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes custom-effect-reverse {
+  0% {
+    transform: translateX(0); }
+  25% {
+    transform: translateX(-100%); }
+  50% {
+    transform: translateX(0); }
+  75% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
+
+/*@-webkit-keyframes custom-effect {
+    0% {
+        top: 0px;
+    }
+
+    25% {
+        top: 200px;
+    }
+
+    75% {
+        top: 50px
+    }
+
+    100% {
+        top: 100px;
+    }
+}*/
+/*$light-gray: #1a1a1a;*/
 @font-face {
   font-family: 'Montserrat-ExtraLight';
   src: url("/Content/Fonts/Montserrat-ExtraLight.otf") format("opentype"), url("/Content/Fonts/Montserrat-ExtraLight.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-ExtraLight.woff") format("woff"), url("/Content/Fonts/Montserrat-ExtraLight.ttf") format("truetype"), url("/Content/Fonts/Montserrat-ExtraLight.svg#svgFontName") format("svg"); }
@@ -232,37 +382,39 @@ img {
     font-weight: 700;
 }*/
 /*$light-gray: #1a1a1a;*/
-.fullwidth:nth-of-type(2), .fullwidth-small:nth-of-type(2), .fullwidth-small-white:nth-of-type(2) {
-  margin-top: 80px; }
+.fullwidth, .fullwidth-small, .fullwidth-small-white {
+  margin: 80px 0; }
+  .fullwidth .container, .fullwidth-small .container, .fullwidth-small-white .container {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+    .fullwidth .container .row, .fullwidth-small .container .row, .fullwidth-small-white .container .row {
+      margin: 0; }
+      .fullwidth .container .row > div, .fullwidth-small .container .row > div, .fullwidth-small-white .container .row > div {
+        height: 75vh;
+        padding: 0;
+        background-color: #313c40; }
+        .fullwidth .container .row > div > div, .fullwidth-small .container .row > div > div, .fullwidth-small-white .container .row > div > div {
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          height: 75vh; }
+          .fullwidth .container .row > div > div.center-content, .fullwidth-small .container .row > div > div.center-content, .fullwidth-small-white .container .row > div > div.center-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: auto;
+            max-width: 60%; }
+            .fullwidth .container .row > div > div.center-content h2, .fullwidth .container .row > div > div.center-content p, .fullwidth .container .row > div > div.center-content h3, .fullwidth-small .container .row > div > div.center-content h2, .fullwidth-small .container .row > div > div.center-content p, .fullwidth-small .container .row > div > div.center-content h3, .fullwidth-small-white .container .row > div > div.center-content h2, .fullwidth-small-white .container .row > div > div.center-content p, .fullwidth-small-white .container .row > div > div.center-content h3 {
+              color: white; }
+            .fullwidth .container .row > div > div.center-content h2, .fullwidth-small .container .row > div > div.center-content h2, .fullwidth-small-white .container .row > div > div.center-content h2 {
+              margin-bottom: 25px; }
+            .fullwidth .container .row > div > div.center-content a, .fullwidth-small .container .row > div > div.center-content a, .fullwidth-small-white .container .row > div > div.center-content a {
+              margin-top: 25px; }
 
-.fullwidth .container, .fullwidth-small .container, .fullwidth-small-white .container {
-  width: 100%;
-  margin: 0;
-  padding: 0; }
-  .fullwidth .container .row, .fullwidth-small .container .row, .fullwidth-small-white .container .row {
-    margin: 0; }
-    .fullwidth .container .row > div, .fullwidth-small .container .row > div, .fullwidth-small-white .container .row > div {
-      height: 75vh;
-      padding: 0;
-      background-color: #313c40; }
-      .fullwidth .container .row > div > div, .fullwidth-small .container .row > div > div, .fullwidth-small-white .container .row > div > div {
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        height: 75vh; }
-        .fullwidth .container .row > div > div.center-content, .fullwidth-small .container .row > div > div.center-content, .fullwidth-small-white .container .row > div > div.center-content {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          height: auto;
-          max-width: 60%; }
-          .fullwidth .container .row > div > div.center-content h2, .fullwidth .container .row > div > div.center-content p, .fullwidth .container .row > div > div.center-content h3, .fullwidth-small .container .row > div > div.center-content h2, .fullwidth-small .container .row > div > div.center-content p, .fullwidth-small .container .row > div > div.center-content h3, .fullwidth-small-white .container .row > div > div.center-content h2, .fullwidth-small-white .container .row > div > div.center-content p, .fullwidth-small-white .container .row > div > div.center-content h3 {
-            color: white; }
-          .fullwidth .container .row > div > div.center-content h2, .fullwidth-small .container .row > div > div.center-content h2, .fullwidth-small-white .container .row > div > div.center-content h2 {
-            margin-bottom: 25px; }
-          .fullwidth .container .row > div > div.center-content a, .fullwidth-small .container .row > div > div.center-content a, .fullwidth-small-white .container .row > div > div.center-content a {
-            margin-top: 25px; }
+.frontpage-gridsection .fullwidth, .frontpage-gridsection .fullwidth-small, .frontpage-gridsection .fullwidth-small-white {
+  margin: 0; }
 
 .fullwidth-small .center-content h3, .fullwidth-small-white .center-content h3 {
   color: white; }
@@ -889,154 +1041,6 @@ footer {
     font-family: $font, sans-serif;
     font-weight: 700;
 }*/
-.img-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(18, 18, 18, 0.65); }
-
-.load-overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #ffffff;
-  z-index: 10;
-  transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1);
-  visibility: visible;
-  transform: translateX(0);
-  transition-delay: 1.5s; }
-  .load-overlay.fade-out {
-    transform: translateX(100%);
-    visibility: hidden; }
-    .load-overlay.fade-out .overlay-content img {
-      opacity: 0; }
-    .load-overlay.fade-out .overlay-content .custom-spinners {
-      opacity: 0; }
-  .load-overlay .overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    .load-overlay .overlay-content img {
-      width: 200px;
-      transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1);
-      opacity: 1;
-      transition-delay: 1s; }
-
-.custom-spinners {
-  width: 100px;
-  height: 2px;
-  overflow: hidden;
-  margin: 15px auto;
-  transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1);
-  opacity: 1;
-  transition-delay: 0.5s; }
-  .custom-spinners .before-after {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: relative; }
-    .custom-spinners .before-after::after, .custom-spinners .before-after::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      height: 1px;
-      background-color: #121212;
-      transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1);
-      /*-webkit-animation: custom-effect 5s infinite;*/
-      animation: custom-effect 5s infinite; }
-    .custom-spinners .before-after::after {
-      top: 1px;
-      animation: custom-effect-reverse 5s infinite; }
-
-/* Standard syntax */
-@keyframes custom-effect {
-  0% {
-    transform: translateX(0); }
-  25% {
-    transform: translateX(100%); }
-  50% {
-    transform: translateX(0); }
-  75% {
-    transform: translateX(-100%); }
-  100% {
-    transform: translateX(0); } }
-
-@keyframes custom-effect-reverse {
-  0% {
-    transform: translateX(0); }
-  25% {
-    transform: translateX(-100%); }
-  50% {
-    transform: translateX(0); }
-  75% {
-    transform: translateX(100%); }
-  100% {
-    transform: translateX(0); } }
-
-/*@-webkit-keyframes custom-effect {
-    0% {
-        top: 0px;
-    }
-
-    25% {
-        top: 200px;
-    }
-
-    75% {
-        top: 50px
-    }
-
-    100% {
-        top: 100px;
-    }
-}*/
-/*$light-gray: #1a1a1a;*/
-/*$light-gray: #1a1a1a;*/
-@font-face {
-  font-family: 'Montserrat-ExtraLight';
-  src: url("/Content/Fonts/Montserrat-ExtraLight.otf") format("opentype"), url("/Content/Fonts/Montserrat-ExtraLight.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-ExtraLight.woff") format("woff"), url("/Content/Fonts/Montserrat-ExtraLight.ttf") format("truetype"), url("/Content/Fonts/Montserrat-ExtraLight.svg#svgFontName") format("svg"); }
-
-@font-face {
-  font-family: 'Montserrat-Light';
-  src: url("/Content/Fonts/Montserrat-Light.otf") format("opentype"), url("/Content/Fonts/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-Light.woff") format("woff"), url("/Content/Fonts/Montserrat-Light.ttf") format("truetype"), url("/Content/Fonts/Montserrat-Light.svg#svgFontName") format("svg"); }
-
-@font-face {
-  font-family: 'Montserrat-Regular';
-  src: url("/Content/Fonts/Montserrat-Regular.otf") format("opentype"), url("/Content/Fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-Regular.woff") format("woff"), url("/Content/Fonts/Montserrat-Regular.ttf") format("truetype"), url("/Content/Fonts/Montserrat-Regular.svg#svgFontName") format("svg"); }
-
-@font-face {
-  font-family: 'Montserrat-SemiBold';
-  src: url("/Content/Fonts/Montserrat-SemiBold.otf") format("opentype"), url("/Content/Fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-SemiBold.woff") format("woff"), url("/Content/Fonts/Montserrat-SemiBold.ttf") format("truetype"), url("/Content/Fonts/Montserrat-SemiBold.svg#svgFontName") format("svg"); }
-
-@font-face {
-  font-family: 'Montserrat-Bold';
-  src: url("/Content/Fonts/Montserrat-Bold.otf") format("opentype"), url("/Content/Fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-Bold.woff") format("woff"), url("/Content/Fonts/Montserrat-Bold.ttf") format("truetype"), url("/Content/Fonts/Montserrat-Bold.svg#svgFontName") format("svg"); }
-
-/*$font: 'Fira Sans';
-
-@mixin font-light {
-    font-family: $font, sans-serif;
-    font-weight: 300;
-}
-@mixin font-regular {
-    font-family: $font sans-serif;
-    font-weight: 400;
-}
-@mixin font-semibold {
-    font-family: $font, sans-serif;
-    font-weight: 500;
-}
-@mixin font-bold {
-    font-family: $font, sans-serif;
-    font-weight: 700;
-}*/
 .main-setion {
   margin-top: 80px; }
 
@@ -1204,6 +1208,8 @@ footer {
     float: right; }
     .carousel .right-icon span {
       transform: rotate(180deg); }
+      .carousel .right-icon span svg {
+        top: 49%; }
 
 /*$light-gray: #1a1a1a;*/
 /*$light-gray: #1a1a1a;*/
@@ -1300,7 +1306,7 @@ footer {
 }*/
 .top-banner {
   position: relative;
-  height: 45vh; }
+  height: 400px; }
   .top-banner .top-banner-content {
-    margin-top: 20vh; }
+    margin-top: 180px; }
 

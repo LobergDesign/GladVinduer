@@ -4,9 +4,7 @@
 $section-height: 75vh;
 
 .fullwidth, .fullwidth-small, .fullwidth-small-white {
-    &:nth-of-type(2) {
-        margin-top: 80px;
-    }
+    margin: 80px 0;
 
     .container {
         width: 100%;
@@ -48,6 +46,12 @@ $section-height: 75vh;
     }
 }
 
+.frontpage-gridsection {
+    .fullwidth, .fullwidth-small, .fullwidth-small-white {
+        margin: 0;
+    }
+}
+
 .fullwidth-small, .fullwidth-small-white {
     .center-content {
         h3 {
@@ -85,8 +89,9 @@ $section-height: 75vh;
                         h3, h2, a {
                             color: $main-dark;
                         }
-                        p{
-                            color:$gray;
+
+                        p {
+                            color: $gray;
                         }
                     }
                 }
@@ -151,11 +156,9 @@ $section-height: 75vh;
         }
     }
 }
-
 /*.green {
     background-color: $green;
 }*/
-
 .umb-grid {
     .img-overlay {
         position: relative;

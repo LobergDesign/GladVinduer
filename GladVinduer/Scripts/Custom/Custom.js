@@ -2,6 +2,7 @@
     $("[data-custom-loader]").addClass("fade-out");
 });
 $(document).ready(function () {
+ 
     $('.carousel').carousel({
         interval: 4000
     });

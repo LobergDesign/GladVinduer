@@ -1,0 +1,26 @@
+{
+  "name": "gladvinduer",
+  "version": "1.0.0",
+  "description": "Website for gladvinduer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LobergDesign/GladVinduer.git"
+  },
+  "keywords": [
+    "Vinduespolering"
+  ],
+  "author": "LobergDesign",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LobergDesign/GladVinduer/issues"
+  },
+  "homepage": "https://github.com/LobergDesign/GladVinduer#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4"
+  }
+}
