@@ -516,82 +516,6 @@ img {
     margin-bottom: 45px; }
 
 /*$light-gray: #1a1a1a;*/
-/*$light-gray: #1a1a1a;*/
-@font-face {
-  font-family: 'Montserrat-ExtraLight';
-  src: url("/Content/Fonts/Montserrat-ExtraLight.otf") format("opentype"), url("/Content/Fonts/Montserrat-ExtraLight.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-ExtraLight.woff") format("woff"), url("/Content/Fonts/Montserrat-ExtraLight.ttf") format("truetype"), url("/Content/Fonts/Montserrat-ExtraLight.svg#svgFontName") format("svg"); }
-
-@font-face {
-  font-family: 'Montserrat-Light';
-  src: url("/Content/Fonts/Montserrat-Light.otf") format("opentype"), url("/Content/Fonts/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-Light.woff") format("woff"), url("/Content/Fonts/Montserrat-Light.ttf") format("truetype"), url("/Content/Fonts/Montserrat-Light.svg#svgFontName") format("svg"); }
-
-@font-face {
-  font-family: 'Montserrat-Regular';
-  src: url("/Content/Fonts/Montserrat-Regular.otf") format("opentype"), url("/Content/Fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-Regular.woff") format("woff"), url("/Content/Fonts/Montserrat-Regular.ttf") format("truetype"), url("/Content/Fonts/Montserrat-Regular.svg#svgFontName") format("svg"); }
-
-@font-face {
-  font-family: 'Montserrat-SemiBold';
-  src: url("/Content/Fonts/Montserrat-SemiBold.otf") format("opentype"), url("/Content/Fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-SemiBold.woff") format("woff"), url("/Content/Fonts/Montserrat-SemiBold.ttf") format("truetype"), url("/Content/Fonts/Montserrat-SemiBold.svg#svgFontName") format("svg"); }
-
-@font-face {
-  font-family: 'Montserrat-Bold';
-  src: url("/Content/Fonts/Montserrat-Bold.otf") format("opentype"), url("/Content/Fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-Bold.woff") format("woff"), url("/Content/Fonts/Montserrat-Bold.ttf") format("truetype"), url("/Content/Fonts/Montserrat-Bold.svg#svgFontName") format("svg"); }
-
-/*$font: 'Fira Sans';
-
-@mixin font-light {
-    font-family: $font, sans-serif;
-    font-weight: 300;
-}
-@mixin font-regular {
-    font-family: $font sans-serif;
-    font-weight: 400;
-}
-@mixin font-semibold {
-    font-family: $font, sans-serif;
-    font-weight: 500;
-}
-@mixin font-bold {
-    font-family: $font, sans-serif;
-    font-weight: 700;
-}*/
-.menu-toggle {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 20; }
-  .menu-toggle .menu-icon {
-    margin: 30px;
-    cursor: pointer;
-    padding: 5px; }
-    .menu-toggle .menu-icon span {
-      position: relative;
-      display: block;
-      width: 16px;
-      height: 1px;
-      background: #ffffff;
-      transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1); }
-      .menu-toggle .menu-icon span:before, .menu-toggle .menu-icon span:after {
-        position: absolute;
-        right: 0;
-        background: #ffffff;
-        content: '';
-        width: 23px;
-        height: 1px;
-        transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1); }
-      .menu-toggle .menu-icon span:before {
-        top: -6px; }
-      .menu-toggle .menu-icon span:after {
-        top: 6px;
-        width: 11px; }
-    .menu-toggle .menu-icon.active span {
-      background: transparent; }
-      .menu-toggle .menu-icon.active span:before {
-        transform: rotate(45deg) translate(5px, 6px); }
-      .menu-toggle .menu-icon.active span:after {
-        transform: rotate(-45deg) translate(5px, -6px); }
-
-/*$light-gray: #1a1a1a;*/
 @font-face {
   font-family: 'Montserrat-ExtraLight';
   src: url("/Content/Fonts/Montserrat-ExtraLight.otf") format("opentype"), url("/Content/Fonts/Montserrat-ExtraLight.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-ExtraLight.woff") format("woff"), url("/Content/Fonts/Montserrat-ExtraLight.ttf") format("truetype"), url("/Content/Fonts/Montserrat-ExtraLight.svg#svgFontName") format("svg"); }
@@ -845,6 +769,113 @@ a.main-link, span.main-link {
     font-family: $font, sans-serif;
     font-weight: 700;
 }*/
+.menu-icon-container {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 46.8px;
+  height: 46.8px;
+  z-index: 5;
+  background-color: #ffffff; }
+  .menu-icon-container.active span.menu-icon {
+    transform: rotate(45deg) translate(6px, 6px); }
+    .menu-icon-container.active span.menu-icon::before {
+      opacity: 0; }
+    .menu-icon-container.active span.menu-icon::after {
+      transform: rotate(-90deg) translate(14px, 0px); }
+  .menu-icon-container span {
+    padding: 15px 0;
+    display: inline-block; }
+    .menu-icon-container span.menu-icon {
+      position: absolute;
+      top: 0;
+      background-color: #121212;
+      width: 26px;
+      height: 2px;
+      padding: 0;
+      transition: 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+      margin: 19px 12px; }
+      .menu-icon-container span.menu-icon::before, .menu-icon-container span.menu-icon::after {
+        content: '';
+        position: absolute;
+        top: 7px;
+        background-color: #121212;
+        width: 26px;
+        height: 2px;
+        transition: 0.4s cubic-bezier(0.215, 0.61, 0.355, 1); }
+      .menu-icon-container span.menu-icon::after {
+        top: 14px; }
+
+@media only screen and (max-width: 1200px) {
+  .menu-icon-container {
+    top: 5px;
+    right: 15px; } }
+
+@media only screen and (max-width: 767px) {
+  .menu-icon-container {
+    top: 0;
+    right: 5px;
+    width: 39.6px;
+    height: 39.6px; }
+    .menu-icon-container.active span.menu-icon {
+      transform: rotate(45deg) translate(4px, 4px); }
+      .menu-icon-container.active span.menu-icon::before {
+        opacity: 0; }
+      .menu-icon-container.active span.menu-icon::after {
+        transform: rotate(-90deg) translate(10px, 0px); }
+    .menu-icon-container span {
+      padding: 0; }
+      .menu-icon-container span.menu-icon {
+        width: 22px;
+        height: 1px;
+        margin: 18px 8px; }
+        .menu-icon-container span.menu-icon::before, .menu-icon-container span.menu-icon::after {
+          top: 5px;
+          width: 22px;
+          height: 1px; }
+        .menu-icon-container span.menu-icon::after {
+          top: 10px; } }
+
+/*$light-gray: #1a1a1a;*/
+/*$light-gray: #1a1a1a;*/
+@font-face {
+  font-family: 'Montserrat-ExtraLight';
+  src: url("/Content/Fonts/Montserrat-ExtraLight.otf") format("opentype"), url("/Content/Fonts/Montserrat-ExtraLight.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-ExtraLight.woff") format("woff"), url("/Content/Fonts/Montserrat-ExtraLight.ttf") format("truetype"), url("/Content/Fonts/Montserrat-ExtraLight.svg#svgFontName") format("svg"); }
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url("/Content/Fonts/Montserrat-Light.otf") format("opentype"), url("/Content/Fonts/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-Light.woff") format("woff"), url("/Content/Fonts/Montserrat-Light.ttf") format("truetype"), url("/Content/Fonts/Montserrat-Light.svg#svgFontName") format("svg"); }
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("/Content/Fonts/Montserrat-Regular.otf") format("opentype"), url("/Content/Fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-Regular.woff") format("woff"), url("/Content/Fonts/Montserrat-Regular.ttf") format("truetype"), url("/Content/Fonts/Montserrat-Regular.svg#svgFontName") format("svg"); }
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url("/Content/Fonts/Montserrat-SemiBold.otf") format("opentype"), url("/Content/Fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-SemiBold.woff") format("woff"), url("/Content/Fonts/Montserrat-SemiBold.ttf") format("truetype"), url("/Content/Fonts/Montserrat-SemiBold.svg#svgFontName") format("svg"); }
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url("/Content/Fonts/Montserrat-Bold.otf") format("opentype"), url("/Content/Fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("/Content/Fonts/Montserrat-Bold.woff") format("woff"), url("/Content/Fonts/Montserrat-Bold.ttf") format("truetype"), url("/Content/Fonts/Montserrat-Bold.svg#svgFontName") format("svg"); }
+
+/*$font: 'Fira Sans';
+
+@mixin font-light {
+    font-family: $font, sans-serif;
+    font-weight: 300;
+}
+@mixin font-regular {
+    font-family: $font sans-serif;
+    font-weight: 400;
+}
+@mixin font-semibold {
+    font-family: $font, sans-serif;
+    font-weight: 500;
+}
+@mixin font-bold {
+    font-family: $font, sans-serif;
+    font-weight: 700;
+}*/
 header {
   position: fixed;
   top: 0;
@@ -855,8 +886,6 @@ header {
   padding-right: 70px;
   background-color: white;
   height: 80px;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1, 1);
   transition: 0.32s cubic-bezier(0.215, 0.61, 0.355, 1); }
   header.scroll {
     height: 65px; }
@@ -907,6 +936,66 @@ header {
     width: 12px;
     height: 12px;
     margin-left: 30px; }
+
+@media only screen and (min-width: 1200px) {
+  header {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1, 1); } }
+
+@media only screen and (max-width: 1200px) {
+  header {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 60px; }
+    header .logo-container img {
+      width: 75px;
+      margin: 16px 8px; }
+  .navigation {
+    float: none;
+    padding: 0;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    width: 350px;
+    background-color: white;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .navigation.active {
+      transform: translateX(0);
+      visibility: visible; }
+    .navigation ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 42%; }
+      .navigation ul li {
+        display: block; }
+  .social-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px; }
+    .social-container a:last-of-type svg {
+      margin-bottom: -1px; }
+    .social-container svg {
+      margin-left: 0;
+      margin-right: 15px; } }
+
+@media only screen and (max-width: 767px) {
+  header {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 45px; }
+    header .logo-container img {
+      width: 55px;
+      margin: 12px 0px; }
+  .navigation {
+    top: 45px;
+    left: 0;
+    width: 100%; } }
 
 /*$light-gray: #1a1a1a;*/
 /*$light-gray: #1a1a1a;*/

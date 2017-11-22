@@ -11,8 +11,6 @@ header {
     padding-right: 70px;
     background-color: white;
     height: $header-height;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0) scale(1.0, 1.0);
     transition: 0.32s $cubic;
 
     &.scroll {
@@ -103,5 +101,93 @@ header {
         width: 12px;
         height: 12px;
         margin-left: 30px;
+    }
+}
+
+@include from-desktop {
+    header {
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    }
+}
+
+@include desktop {
+    header {
+        padding-left: 15px;
+        padding-right: 15px;
+        height: $header-height-sm;
+
+        .logo-container {
+            img {
+                width: 75px;
+                margin: 16px 8px;
+            }
+        }
+    }
+
+    .navigation {
+        float: none;
+        padding: 0;
+        position: fixed;
+        top: $header-height-sm;
+        right: 0;
+        bottom: 0;
+        width: 350px;
+        background-color: white;
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: $transition;
+
+        &.active {
+            transform: translateX(0);
+            visibility: visible;
+        }
+
+        ul {
+            @include center;
+            top: 42%;
+
+            li {
+                display: block;
+            }
+        }
+    }
+
+    .social-container {
+        @include center-x;
+        bottom: 25px;
+
+        a {
+            &:last-of-type {
+                svg {
+                    margin-bottom: -1px;
+                }
+            }
+        }
+
+        svg {
+            margin-left: 0;
+            margin-right: 15px;
+        }
+    }
+}
+@include phones {
+    header {
+        padding-left: 15px;
+        padding-right: 15px;
+        height: $header-height-xs;
+
+        .logo-container {
+            img {
+                width: 55px;
+                margin: 12px 0px;
+            }
+        }
+    }
+
+    .navigation {
+        top: $header-height-xs;
+        left: 0;
+        width: 100%;
     }
 }

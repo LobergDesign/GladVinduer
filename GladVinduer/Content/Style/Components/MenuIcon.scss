@@ -1,56 +1,116 @@
 ﻿@import "../Helpers/var";
 @import "../Helpers/mixin";
 
-.menu-toggle {
-	position:fixed;
-	top:0;
-	right:0;
-	z-index:20;
-	.menu-icon {
-		margin: 30px;
-		cursor: pointer;
-		padding: 5px;
+$menu-icon-width: 26px;
+$menu-icon-height: 2px;
+$menu-icon-space: 7px;
+$menu-icon-width-xs: 22px;
+$menu-icon-height-xs: 1px;
+$menu-icon-space-xs: 5px;
 
-		span {
-			position: relative;
-			display: block;
-			width: 16px;
-			height:1px;
-			background: $white;
-			transition: $transition;
+.menu-icon-container {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: ($menu-icon-width * 1.8);
+    height: ($menu-icon-width * 1.8);
+    z-index: 5;
+    background-color: $white;
 
-			&:before, &:after {
-				position: absolute;
-				right:0;
-				background: $white;
-				content: '';
-				width: 23px;
-				height: 1px;
-				transition: $transition;
-			}
+    &.active {
+        span {
+            &.menu-icon {
+                transform: rotate(45deg) translate(6px,6px);
 
-			&:before {
-				top: -6px;
-			}
+                &::before {
+                    opacity: 0;
+                }
 
-			&:after {
-				top: 6px;
-				width: 11px;
-			}
-		}
+                &::after {
+                    transform: rotate(-90deg) translate(14px,0px);
+                }
+            }
+        }
+    }
 
-		&.active {
-			span {
-				background: transparent;
+    span {
+        padding: 15px 0;
+        display: inline-block;
 
-				&:before {
-					transform: rotate(45deg) translate(5px, 6px);
-				}
+        &.menu-icon {
+            position: absolute;
+            top: 0;
+            background-color: $main-dark;
+            width: $menu-icon-width;
+            height: $menu-icon-height;
+            padding: 0;
+            transition: $transition-fast;
+            margin: 19px 12px;
 
-				&:after {
-					transform: rotate(-45deg) translate(5px, -6px);
-				}
-			}
-		}
-	}
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                top: $menu-icon-space;
+                background-color: $main-dark;
+                width: $menu-icon-width;
+                height: $menu-icon-height;
+                transition: $transition-fast;
+            }
+
+            &::after {
+                top: ($menu-icon-space * 2);
+            }
+        }
+    }
+}
+
+@include desktop {
+    .menu-icon-container {
+        top: 5px;
+        right: 15px;
+    }
+}
+@include phones {
+    .menu-icon-container {
+        top: 0;
+        right: 5px;
+        width: ($menu-icon-width-xs * 1.8);
+        height: ($menu-icon-width-xs * 1.8);
+
+        &.active {
+            span {
+                &.menu-icon {
+                    transform: rotate(45deg) translate(4px,4px);
+
+                    &::before {
+                        opacity: 0;
+                    }
+
+                    &::after {
+                        transform: rotate(-90deg) translate(10px,0px);
+                    }
+                }
+            }
+        }
+
+        span {
+            padding: 0;
+
+            &.menu-icon {
+                width: $menu-icon-width-xs;
+                height: $menu-icon-height-xs;
+                margin: 18px 8px;
+
+                &::before, &::after {
+                    top: $menu-icon-space-xs;
+                    width: $menu-icon-width-xs;
+                    height: $menu-icon-height-xs;
+                }
+
+                &::after {
+                    top: ($menu-icon-space-xs * 2);
+                }
+            }
+        }
+    }
 }
