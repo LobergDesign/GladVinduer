@@ -5,6 +5,7 @@ var small = $(window).width() < 768;
 
 $(window).load(function () {
     $("[data-custom-loader]").addClass("fade-out");
+    $(".main-container").addClass("fade-in");
 });
 $(document).ready(function () {
 

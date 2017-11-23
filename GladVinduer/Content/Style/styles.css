@@ -273,6 +273,14 @@ img {
 .center-items {
   text-align: center; }
 
+.main-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .main-container.fade-in {
+    visibility: visible;
+    opacity: 1; }
+
 .data-show-visible {
   opacity: 0;
   transform: translateX(-25px);

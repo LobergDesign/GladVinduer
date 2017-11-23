@@ -110,7 +110,15 @@ img {
 .center-items {
     text-align: center;
 }
-
+.main-container {
+    visibility:hidden;
+    opacity:0;
+    transition: $transition;
+    &.fade-in{
+        visibility:visible;
+        opacity:1;
+    }
+}
 
 $effect: 10;
 
