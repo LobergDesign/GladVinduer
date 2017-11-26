@@ -1,0 +1,38 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ServicePage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Shared/_Layout.cshtml";
+    var allServices = Model.Content.Children<ServiceItems>()
+             .OrderBy(n => n.CreateDate);
+}
+
+<div class="top-banner cover" style="background-image: url('@Model.Content.ServiceImage.Url')">
+    <div class="img-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-push-1">
+                <div class="top-banner-content">
+                    <h1>@Model.Content.ServiceHeadline</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-push-1">
+            @Model.Content.ServiceBodytext
+        </div>
+    </div>
+    <div class="service-list">
+        <div class="row">
+            @foreach (var item in allServices)
+            {
+                <div class="col-xs-6">
+                    <h3>@item.ServiceItemHeadline</h3>
+                    <p>@item.ServiceItemBodytext</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>

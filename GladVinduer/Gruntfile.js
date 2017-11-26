@@ -1,14 +1,30 @@
-﻿module.exports = function(grunt) {
+﻿
+
+module.exports = function (grunt) {
   
   grunt.initConfig({
-      autoprefixer: {
-          dist: {
-              files: {
-                  '/Content/Style/styles.css': '/Content/Style/Other/styles.css'
-              }
+      postcss: {
+          options: {
+              map: true,
+
+              map: {
+                  inline: false, 
+                  annotation: 'dist/css/maps/'
+              },
+
+              processors: [
+                  require('pixrem')(), // add fallbacks for rem units
+                  require('autoprefixer')({ browsers: 'last 2 versions' }), // add vendor prefixes
+                  require('cssnano')() // minify the result
+              ]
           },
-      },
+          dist: {
+              src: 'css/*.css'
+          }
+      }
+
+     
     });
-  grunt.registerTask('build', ['autoprefixer']);
+  grunt.registerTask('build', ['']);
   grunt.registerTask('default', []);
 };

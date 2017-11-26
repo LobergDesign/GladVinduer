@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+    var selection = Model.Content.Site().FirstChild("servicePage").Children("serviceItems")
+                        .Where(x => x.IsVisible());
+}
+<div class="row service-blocks">
+    @foreach (var item in selection)
+    {
+        <a class="service-links data-show-visible" href="@item.GetPropertyValue("ServiceItemLink")">
+            <div class="col-sm-3">
+                <h4>@item.GetPropertyValue("ServiceItemHeadline")</h4>
+                @item.GetPropertyValue("ServiceItemBodytext")
+                <span class="main-link">Læs mere</span>
+            </div>
+        </a>
+    }
+</div>
+
