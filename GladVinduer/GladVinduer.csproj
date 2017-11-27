@@ -266,6 +266,12 @@
     <Content Include="Content\Style\styles.min.css">
       <DependentUpon>styles.css</DependentUpon>
     </Content>
+    <Content Include="Content\Style\Test\Test.css">
+      <DependentUpon>Test.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Style\Test\Test.min.css">
+      <DependentUpon>Test.css</DependentUpon>
+    </Content>
     <Content Include="Gruntfile.js" />
     <Content Include="Media\Web.config" />
     <Content Include="config\umbracoSettings.config" />
@@ -302,6 +308,7 @@
     <Content Include="Content\Style\Base\Grid.scss" />
     <Content Include="Content\Style\Partials\TopBanner.scss" />
     <Content Include="package.json" />
+    <Content Include="Content\Style\Test\Test.scss" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -448,6 +455,7 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\Style\Test\Dist\" />
     <Folder Include="Views\FrontPage\" />
     <Folder Include="Views\Master\" />
   </ItemGroup>

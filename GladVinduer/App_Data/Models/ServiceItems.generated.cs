@@ -49,9 +49,9 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Service item bodytext
 		///</summary>
 		[ImplementPropertyType("serviceItemBodytext")]
-		public IHtmlString ServiceItemBodytext
+		public string ServiceItemBodytext
 		{
-			get { return this.GetPropertyValue<IHtmlString>("serviceItemBodytext"); }
+			get { return this.GetPropertyValue<string>("serviceItemBodytext"); }
 		}
 
 		///<summary>

@@ -1,6 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     var sectionItems = CurrentPage.Site().FirstChild("frontpageFirstSection").Children("firstSectionItem");
+    //var programItemList = Model.Site().FirstChild<ProgramPage>().Children<ProgramItem>();
 
 }
 
@@ -17,3 +18,11 @@
         </a>
     }
 </div>
+
+@*@functions{
+    public static bool Substring(string BodyText)
+    {
+        string text = string.Substring(0, 6);
+        return false;
+    }
+}*@
