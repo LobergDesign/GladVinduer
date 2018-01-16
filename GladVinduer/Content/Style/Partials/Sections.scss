@@ -77,4 +77,72 @@
 }
 
 
+@include phones-tablets {
+    .top-section {
+        margin: 20px 10px 40px;
 
+        .top-section-left {
+            span, h1 {
+                font-size: 1.4rem;
+            }
+        }
+
+        .top-section-right {
+
+            p {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .top-section-left {
+        .toggle-word {
+            height: 28px;
+        }
+    }
+
+    .custom-grid-section {
+        padding: 50px 0 50px;
+    }
+
+    .first-section {
+        margin: 0 0 20px;
+    }
+
+    .main-setion {
+        margin-top: $header-height-sm;
+    }
+}
+@include phones {
+    .main-setion {
+        margin-top: $header-height-xs;
+    }
+
+    .top-section {
+        margin: 10px 10px 10px;
+
+        .top-section-left {
+            span, h1 {
+                font-size: 1.1rem;
+            }
+        }
+
+        .top-section-right {
+            margin-top: 20px;
+
+            p {
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    .top-section-left {
+        .toggle-word {
+            height: 22px;
+        }
+    }
+
+    .custom-grid-section {
+        padding: 20px 0 20px;
+    }
+}

@@ -186,8 +186,38 @@ header {
     }
 
     .navigation {
-        top: $header-height-xs;
+        top: ($header-height-xs - 1px);
         left: 0;
         width: 100%;
+
+
+        ul {
+            li {
+                transform: translateY(-10px);
+                opacity: 0;
+                transition: $transition;
+
+                a {
+                    -webkit-backface-visibility: hidden;
+                    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+                }
+            }
+        }
+
+        &.active {
+            ul {
+                li {
+                    opacity: 1;
+                    transform: translateY(0);
+
+
+                    @for $i from 1 through 14 {
+                        &:nth-child(#{$i}) {
+                            transition-delay: $i*.09s;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

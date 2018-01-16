@@ -156,9 +156,6 @@ $section-height: 75vh;
         }
     }
 }
-/*.green {
-    background-color: $green;
-}*/
 .umb-grid {
     .img-overlay {
         position: relative;
@@ -214,6 +211,86 @@ $section-height: 75vh;
         img {
             margin-top: 20px;
             margin-bottom: 45px;
+        }
+    }
+}
+
+
+@include phones-tablets {
+    $section-height-sm: 55vh;
+
+    .fullwidth, .fullwidth-small, .fullwidth-small-white {
+        .container {
+
+            .row {
+
+                > div {
+                    height: $section-height-sm;
+
+                    > div {
+                        height: $section-height-sm;
+
+                        &.center-content {
+                            height: auto;
+                            max-width: 100%;
+                            position: relative;
+                            top: auto;
+                            left: auto;
+                            max-height: 100%;
+                            overflow-y: auto;
+                            transform: none;
+                            padding: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .fullwidth-tinted {
+        padding: 35px 0;
+
+        h2 {
+            padding-right: 0;
+            margin-bottom: 5px;
+        }
+    }
+
+    .payment {
+        padding: 35px 0;
+
+        .mobilepay {
+            width: 140px;
+        }
+
+        h2 {
+            margin-bottom: 5px;
+        }
+    }
+
+    .main-pages {
+        padding: 50px 0 40px;
+    }
+}
+@include phones {
+    .main-pages {
+        padding: 20px 0 30px;
+
+        .grid-section {
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+
+            img {
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
         }
     }
 }

@@ -14,3 +14,18 @@
        }
     }
 }
+@include phones {
+    .top-banner {
+        height: 280px;
+
+        .top-banner-content {
+            margin-top: 100px;
+
+            span, a {
+                color: $white;
+                display: block;
+                font-size: 1rem;
+            }
+        }
+    }
+}

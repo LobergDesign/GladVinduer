@@ -141,3 +141,31 @@ $effect: 10;
     opacity: 1;
     transform: translateX(0);
 }
+@include phones {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        p {
+            font-size: 1.3rem;
+
+            strong {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.8;
+
+        strong {
+            font-size: 14px;
+        }
+    }
+}

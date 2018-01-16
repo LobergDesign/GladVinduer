@@ -1,8 +1,6 @@
 ﻿@import "../Helpers/var";
 @import "../Helpers/mixin";
 
-
-
 .img-overlay {
     position: absolute;
     @include all-sides;
@@ -146,3 +144,18 @@
     }
 }*/
 
+@include phones {
+
+    .load-overlay {
+
+        .overlay-content {
+            img {
+                width: 120px;
+            }
+        }
+    }
+
+    .custom-spinners {
+        width: 80px;
+    }
+}

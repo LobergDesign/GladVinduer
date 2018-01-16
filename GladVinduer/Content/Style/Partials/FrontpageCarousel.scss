@@ -110,8 +110,76 @@
 
         span {
             transform: rotate(180deg);
-            svg{
-                top:49%;
+
+            svg {
+                top: 49%;
+            }
+        }
+    }
+}
+
+@include phones {
+    .carousel {
+
+        .carousel-inner {
+            .item {
+                height: 35vh;
+
+                .carousel-caption {
+                    width: 100%;
+                    margin-left: 15px;
+
+                    .caption-content {
+                        p {
+                            font-size: 1.2rem;
+                            line-height: 1;
+                            margin-bottom: 6px;
+
+                            strong {
+                                font-size: 1.2rem;
+                            }
+                        }
+
+                        a {
+                            padding: 5px 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        $slider-icon: 40px;
+
+        .slider-navs {
+            @include center-x;
+            bottom: 0;
+            height: ($slider-icon - 12px);
+            width: ($slider-icon + $slider-icon);
+            transition: none;
+            transition-delay: 0;
+        }
+
+        .left-icon, .right-icon {
+            width: $slider-icon;
+            height: ($slider-icon);
+            display: inline-block;
+            text-align: center;
+
+            span {
+
+                svg {
+                    width: 10px;
+                    height: 10px;
+                    top:44%;
+                }
+            }
+        }
+
+        .right-icon {
+            span {
+                svg {
+                    top: 55%;
+                }
             }
         }
     }

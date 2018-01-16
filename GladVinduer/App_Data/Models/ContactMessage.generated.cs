@@ -55,6 +55,15 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// ContactFormFirm
+		///</summary>
+		[ImplementPropertyType("contactFormFirm")]
+		public string ContactFormFirm
+		{
+			get { return this.GetPropertyValue<string>("contactFormFirm"); }
+		}
+
+		///<summary>
 		/// contactForm Message
 		///</summary>
 		[ImplementPropertyType("contactFormMessage")]

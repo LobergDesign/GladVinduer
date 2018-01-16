@@ -23,24 +23,15 @@
     <div class="grid">
         @CurrentPage.GetGridHtml("gridContent")
     </div>
-    <div class="fullwidth">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    @*@Html.Action("simpleContact", "ContactPage")*@
-                    <h2>Contactform her</h2>
-                </div>            
-                <div class="col-md-6 column">
-                    <div class="center-content data-show-visible">
-                        <p><span class="light-gray">Telefon</span></p>
-                        <h2>+45 53 83 34 66</h2>
-                        <p><span class="light-gray">Email</span></p>
-                        <h2>morten@gladvinduer.dk</h2>
-                    </div>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-6">
+                @Html.Action("simpleContact", "ContactPage")
             </div>
         </div>
     </div>
+                    
+
 </div>
 
 @*<div class="container">
