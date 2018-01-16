@@ -1,0 +1,43 @@
+﻿@model GladVinduer.Models.SimpleFormModel
+<div class="col-xs-12">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Please leave a comment</h2>
+        </div>
+    </div>
+
+    @using (Html.BeginUmbracoForm<GladVinduer.Controllers.ContactPageController>("simpleContact"))
+    {
+        <div class="row">
+            <div class="col-xs-4">
+                @Html.TextBoxFor(x => x.Name, new { placeholder = "name" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                @Html.TextBoxFor(x => x.Email, new { Type = "email", placeholder = "email" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                @Html.TextAreaFor(x => x.Message, new { placeholder = " your message" })
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <button class="main-link" type="submit">Send</button>
+                </div>
+            </div>
+    }
+    @if (TempData["success"] != null)
+    {
+        if ((bool)TempData["success"])
+        {
+            <div>We received your comment.</div>
+        }
+        else
+        {
+            <div>There was an error.</div>
+        }
+    }
+</div>

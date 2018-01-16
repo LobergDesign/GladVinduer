@@ -234,9 +234,9 @@ p, span {
   font-family: 'Montserrat-Regular', sans-serif; }
 
 p {
-  font-family: 'Montserrat-ExtraLight', sans-serif;
+  font-family: 'Montserrat-Light', sans-serif;
   line-height: 2;
-  color: #b2b1b1; }
+  color: #787878; }
   p strong, p b {
     font-size: 0.875rem;
     font-family: 'Montserrat-SemiBold', sans-serif;
@@ -443,7 +443,7 @@ img {
   .fullwidth-small-white .container .row > div > div.center-content h3, .fullwidth-small-white .container .row > div > div.center-content h2, .fullwidth-small-white .container .row > div > div.center-content a {
     color: #121212; }
   .fullwidth-small-white .container .row > div > div.center-content p {
-    color: #b2b1b1; }
+    color: #787878; }
 
 .fullwidth-tinted {
   background-color: #f5f6f6;
@@ -498,7 +498,7 @@ img {
 
 .umb-grid p a {
   font-family: 'Montserrat-Regular', sans-serif;
-  color: #b2b1b1;
+  color: #787878;
   text-decoration: underline;
   transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1); }
   .umb-grid p a:hover {
@@ -563,6 +563,13 @@ img {
     font-weight: 700;
 }*/
 /*$light-gray: #1a1a1a;*/
+button {
+  background-color: transparent;
+  margin: 5px 0;
+  padding: 5px 25px;
+  border: 1ps solid #787878;
+  outline: none; }
+
 .round-button {
   width: 50px;
   height: 50px;
@@ -572,13 +579,13 @@ img {
   text-align: center;
   padding-top: 12px; }
 
-a.line-effect {
+a.line-effect, button.line-effect {
   display: block;
   position: relative;
   transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1); }
-  a.line-effect.main-link:hover {
+  a.line-effect.main-link:hover, button.line-effect.main-link:hover {
     margin-left: 30px; }
-  a.line-effect:before {
+  a.line-effect:before, button.line-effect:before {
     content: '';
     position: absolute;
     top: 50%;
@@ -844,6 +851,11 @@ a.main-link, span.main-link {
         .menu-icon-container span.menu-icon::after {
           top: 10px; } }
 
+input, textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 5px 0; }
+
 /*$light-gray: #1a1a1a;*/
 /*$light-gray: #1a1a1a;*/
 @font-face {
@@ -927,7 +939,7 @@ header {
     .navigation ul li a {
       display: inline-block;
       font-family: 'Montserrat-Regular', sans-serif;
-      color: #b2b1b1;
+      color: #787878;
       font-size: 0.8rem;
       padding: 12px 20px;
       transition: 0.55s cubic-bezier(0.215, 0.61, 0.355, 1); }
@@ -1145,12 +1157,11 @@ footer {
   margin: 100px 50px 40px; }
   .top-section .top-section-left span, .top-section .top-section-left h1 {
     font-family: 'Montserrat-Bold', sans-serif;
-    font-size: 1.8rem; }
+    font-size: 1.7rem; }
   .top-section .top-section-left h1 {
     font-family: 'Montserrat-Light', sans-serif;
     margin: 0;
-    color: #121212;
-    font-size: 1.8rem; }
+    color: #121212; }
   .top-section .top-section-right img {
     width: 55px; }
   .top-section .top-section-right p {
@@ -1163,12 +1174,12 @@ footer {
   padding: 100px 0 150px; }
 
 .first-section {
-  margin: 50px 0 180px; }
+  margin: 50px 0 150px; }
 
 .top-section-left .toggle-word {
   position: relative;
   width: 100%;
-  height: 40px;
+  height: 35px;
   overflow: hidden;
   display: inline-block; }
   .top-section-left .toggle-word > div span {
@@ -1290,7 +1301,7 @@ footer {
       height: 100%;
       width: 100%; }
       .carousel .left-icon span:hover svg, .carousel .right-icon span:hover svg {
-        fill: #b2b1b1; }
+        fill: #787878; }
       .carousel .left-icon span svg, .carousel .right-icon span svg {
         position: absolute;
         width: 14px;
@@ -1348,14 +1359,18 @@ footer {
     font-family: $font, sans-serif;
     font-weight: 700;
 }*/
+.service-blocks h2 {
+  margin-bottom: 30px; }
+
 .service-blocks .service-links {
-  display: block; }
+  display: block;
+  margin-bottom: 25px; }
   .service-blocks .service-links:hover span {
     opacity: 1;
     transform: translateX(0); }
   .service-blocks .service-links p {
-    color: #b2b1b1;
-    font-size: 0.75rem; }
+    color: #787878;
+    font-size: 0.8rem; }
   .service-blocks .service-links span {
     opacity: 0;
     transform: translateX(-10px);
@@ -1406,4 +1421,8 @@ footer {
   height: 400px; }
   .top-banner .top-banner-content {
     margin-top: 180px; }
+    .top-banner .top-banner-content span, .top-banner .top-banner-content a {
+      color: #ffffff;
+      display: block;
+      font-size: 1rem; }
 

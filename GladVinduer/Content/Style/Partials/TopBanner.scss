@@ -7,5 +7,10 @@
 
     .top-banner-content {
        margin-top: 180px;
+       span, a{
+           color: $white;
+           display: block;
+           font-size: 1rem;
+       }
     }
 }

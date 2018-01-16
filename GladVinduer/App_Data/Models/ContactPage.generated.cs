@@ -20,16 +20,16 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Umbraco.Web.PublishedContentModels
 {
-	/// <summary>Service page</summary>
-	[PublishedContentModel("servicePage")]
-	public partial class ServicePage : PublishedContentModel, ISEO, IVisEkstraSection
+	/// <summary>Contact page</summary>
+	[PublishedContentModel("contactPage")]
+	public partial class ContactPage : PublishedContentModel, IGrid, ISEO, IVisEkstraSection
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "servicePage";
+		public new const string ModelTypeAlias = "contactPage";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
-		public ServicePage(IPublishedContent content)
+		public ContactPage(IPublishedContent content)
 			: base(content)
 		{ }
 
@@ -40,63 +40,36 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 #pragma warning restore 0109
 
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ServicePage, TValue>> selector)
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ContactPage, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
 
 		///<summary>
-		/// ContactForm email
+		/// BannerHeadline
 		///</summary>
-		[ImplementPropertyType("contactFormEmail")]
-		public string ContactFormEmail
+		[ImplementPropertyType("bannerHeadline")]
+		public string BannerHeadline
 		{
-			get { return this.GetPropertyValue<string>("contactFormEmail"); }
+			get { return this.GetPropertyValue<string>("bannerHeadline"); }
 		}
 
 		///<summary>
-		/// ContactForm message
+		/// Banner image
 		///</summary>
-		[ImplementPropertyType("contactFormMessage")]
-		public string ContactFormMessage
+		[ImplementPropertyType("bannerImage")]
+		public IPublishedContent BannerImage
 		{
-			get { return this.GetPropertyValue<string>("contactFormMessage"); }
+			get { return this.GetPropertyValue<IPublishedContent>("bannerImage"); }
 		}
 
 		///<summary>
-		/// ContactForm name
+		/// Grid content
 		///</summary>
-		[ImplementPropertyType("contactFormName")]
-		public string ContactFormName
+		[ImplementPropertyType("gridContent")]
+		public Newtonsoft.Json.Linq.JToken GridContent
 		{
-			get { return this.GetPropertyValue<string>("contactFormName"); }
-		}
-
-		///<summary>
-		/// Service bodytext
-		///</summary>
-		[ImplementPropertyType("serviceBodytext")]
-		public IHtmlString ServiceBodytext
-		{
-			get { return this.GetPropertyValue<IHtmlString>("serviceBodytext"); }
-		}
-
-		///<summary>
-		/// Service headline
-		///</summary>
-		[ImplementPropertyType("serviceHeadline")]
-		public string ServiceHeadline
-		{
-			get { return this.GetPropertyValue<string>("serviceHeadline"); }
-		}
-
-		///<summary>
-		/// Service image
-		///</summary>
-		[ImplementPropertyType("serviceImage")]
-		public IPublishedContent ServiceImage
-		{
-			get { return this.GetPropertyValue<IPublishedContent>("serviceImage"); }
+			get { return Umbraco.Web.PublishedContentModels.Grid.GetGridContent(this); }
 		}
 
 		///<summary>

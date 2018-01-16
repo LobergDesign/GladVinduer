@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Umbraco.Web.PublishedContentModels.FrontPage">
+    <Position X="10" Y="1.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>QAIAAAAARAAAAACIACCEAAAICAACBAAEAAEAABBEAAA=</HashCode>
+      <FileName>App_Data\Models\FrontPage.generated.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.Textpage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAUAAAAACAAAAAAAAACAACBBAAAAAAABBEAAA=</HashCode>
+      <FileName>App_Data\Models\Textpage.generated.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.CarouselItem" Collapsed="true">
+    <Position X="0.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAIAAAAACAACBAAAAAAAAAAAARA=</HashCode>
+      <FileName>App_Data\Models\CarouselItem.generated.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.File" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAACAAAAAAAAACBACBAAAAgAAAAAAAAA=</HashCode>
+      <FileName>App_Data\Models\File.generated.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.FirstSectionItem" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAACAACBAAAABAAQQAAAAA=</HashCode>
+      <FileName>App_Data\Models\FirstSectionItem.generated.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.Folder" Collapsed="true">
+    <Position X="8.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAACAACBAAAAAAAAABAAAA=</HashCode>
+      <FileName>App_Data\Models\Folder.generated.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.FrontpageCarousel" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAACAACBAAAAAAAAAAAABA=</HashCode>
+      <FileName>App_Data\Models\FrontpageCarousel.generated.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.FrontpageFirstSection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAACAACBAAAAAAAAAAAABA=</HashCode>
+      <FileName>App_Data\Models\FrontpageFirstSection.generated.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.Grid" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAQAAAAACAAAAAAAAACAACBAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Data\Models\Grid.generated.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.HideInNav" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAACAACBAAAAAAAAAEAABA=</HashCode>
+      <FileName>App_Data\Models\HideInNav.generated.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.Image" Collapsed="true">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAAAAAAAAACAAAAAAAAACBACBAAIAgAAAAAAAAA=</HashCode>
+      <FileName>App_Data\Models\Image.generated.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.Member" Collapsed="true">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAEAAADAAAACAAAAAAAgACAAGJAAgAAAAAAAAAAI=</HashCode>
+      <FileName>App_Data\Models\Member.generated.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.SEO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAACAAEQAAAAACAACBAAAAAAAAABAAAA=</HashCode>
+      <FileName>App_Data\Models\SEO.generated.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.ServiceItems" Collapsed="true">
+    <Position X="8.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAKAACBAAAIAAAAQAAAAA=</HashCode>
+      <FileName>App_Data\Models\ServiceItems.generated.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Umbraco.Web.PublishedContentModels.ServicePage" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="0.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAACAAACAAAAAAAAACAACBAAAAAQAEBBEAAA=</HashCode>
+      <FileName>App_Data\Models\ServicePage.generated.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Umbraco.Web.PublishedContentModels.IGrid" Collapsed="true">
+    <Position X="3.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Data\Models\Grid.generated.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Umbraco.Web.PublishedContentModels.IHideInNav" Collapsed="true">
+    <Position X="5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>App_Data\Models\HideInNav.generated.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Umbraco.Web.PublishedContentModels.ISEO" Collapsed="true">
+    <Position X="6.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>App_Data\Models\SEO.generated.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

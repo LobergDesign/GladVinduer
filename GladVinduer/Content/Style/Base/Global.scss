@@ -59,7 +59,7 @@ p, span {
 }
 
 p {
-    @include font-ExtraLight;
+    @include font-light;
     line-height: 2;
     color: $gray;
 

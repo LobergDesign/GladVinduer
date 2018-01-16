@@ -10,9 +10,6 @@
     <meta name="keywords" content="@Umbraco.Field("metaKeywords")" />
     <title>@Umbraco.Field("pageName")</title>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700" rel="stylesheet">
-    <link href="~/Content/Style/Other/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/Style/Other/normalize.css" rel="stylesheet" />
-    <link href="~/Content/Style/styles.css" rel="stylesheet" />
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="~/Content/Img/fav/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/Content/Img/fav/apple-touch-icon-114x114.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Content/Img/fav/apple-touch-icon-72x72.png" />
@@ -33,10 +30,14 @@
     <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <link href="~/Content/Style/Other/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Style/Other/normalize.css" rel="stylesheet" />
+    <link href="~/Content/Style/styles.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
 </head>
 <body>
 
-    <div class="load-overlay" data-custom-loader>
+    <div class="load-overlay">
         <div class="overlay-content">
             <img src="~/Content/Img/svg-logo-gron.svg" alt="glad-vinder" />
             <div class="custom-spinners">
@@ -72,7 +73,7 @@
         </footer>
     </div>
     @Html.Partial("_Sprite")
-    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+ 
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/Custom/Custom.js"></script>
 

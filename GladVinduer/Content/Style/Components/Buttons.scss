@@ -2,6 +2,11 @@
 @import "../Helpers/var";
 
 button {
+    background-color: transparent;
+    margin: 5px 0;
+    padding: 5px 25px;
+    border: 1ps solid $gray;
+    outline: none;
 }
 
 .round-button {
@@ -14,7 +19,7 @@ button {
     padding-top: 12px;
 }
 
-a {
+a, button {
     &.line-effect {
         display: block;
         position: relative;

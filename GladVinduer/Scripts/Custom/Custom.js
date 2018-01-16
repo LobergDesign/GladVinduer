@@ -4,7 +4,7 @@ var smallerLarge = $(window).width() < 1024;
 var small = $(window).width() < 768;
 
 $(window).load(function () {
-    $("[data-custom-loader]").addClass("fade-out");
+    $(".load-overlay").addClass("fade-out");
     $(".main-container").addClass("fade-in");
 });
 $(document).ready(function () {

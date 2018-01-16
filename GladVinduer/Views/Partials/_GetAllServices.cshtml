@@ -6,16 +6,21 @@
 
     //var sectionItems = Model.Site().FirstChild<ProgramPage>().Children<ProgramItem>();
 }
-<div class="row service-blocks">
-    @foreach (var item in selection)
-    {
-        <a class="service-links data-show-visible" href="@item.GetPropertyValue("ServiceItemLink")">
-            <div class="col-sm-3">
-                <h4>@item.GetPropertyValue("ServiceItemHeadline")</h4>
-                <p>@item.GetPropertyValue("ServiceItemBodytext").ToString().Substring(0, 100)</p>
-                <span class="main-link">Læs mere</span>
-            </div>
-        </a>
-    }
-</div>
+
+    <div class="row service-blocks">
+        @foreach (var item in selection)
+        {
+      
+            <a class="service-links data-show-visible" href="@item.GetPropertyValue("ServiceItemLink")">
+                <div class="col-sm-3">
+                    <h4>@item.GetPropertyValue("ServiceItemHeadline")</h4>
+                    <p>@item.GetPropertyValue("ServiceItemBodytext").ToString().Substring(0, 100)</p>
+                    <span class="main-link">Læs mere</span>
+                </div>
+            </a>
+         
+        }
+    </div>
+
+
 

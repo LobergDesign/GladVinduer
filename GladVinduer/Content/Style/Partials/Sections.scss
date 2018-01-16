@@ -11,14 +11,13 @@
     .top-section-left {
         span, h1 {
             @include font-bold;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
         }
 
         h1 {
             @include font-light;
             margin: 0;
             color: $main-dark;
-            font-size: 1.8rem;
         }
     }
 
@@ -41,7 +40,7 @@
 }
 
 .first-section {
-    margin: 50px 0 180px;
+    margin: 50px 0 150px;
 }
 // word-toggle
 
@@ -49,7 +48,7 @@
     .toggle-word {
         position: relative;
         width: 100%;
-        height: 40px;
+        height: 35px;
         overflow: hidden;
         display: inline-block;
 
@@ -57,7 +56,6 @@
             span {
                 position: absolute;
                 transform: translateY(100%);
-      
                 transition: $transition;
             }
 
@@ -69,7 +67,6 @@
                     span {
                         &:nth-child(#{$i}) {
                             transform: translateY(0);
-                       
                             transition-delay: 0.2s;
                         }
                     }

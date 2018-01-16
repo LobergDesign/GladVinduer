@@ -2,8 +2,12 @@
 @import "../Helpers/mixin";
 
 .service-blocks {
+    h2{
+        margin-bottom: 30px;
+    }
     .service-links {
         display:block;
+        margin-bottom:25px;
         &:hover {
             span {
                 opacity: 1;
@@ -16,7 +20,7 @@
 
         p {
             color: $gray;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
         }
 
         span {
