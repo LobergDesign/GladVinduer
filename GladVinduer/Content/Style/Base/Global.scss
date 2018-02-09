@@ -51,6 +51,7 @@ h3 {
 h4 {
     font-size: 0.85rem;
     @include font-semibold;
+    line-height:1.6;
 }
 
 p, span {
@@ -141,6 +142,7 @@ $effect: 10;
     opacity: 1;
     transform: translateX(0);
 }
+
 @include phones {
     h1 {
         font-size: 1.6rem;
@@ -161,11 +163,16 @@ $effect: 10;
     }
 
     p {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 1.8;
 
         strong {
             font-size: 14px;
         }
+    }
+
+    .data-show-visible {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

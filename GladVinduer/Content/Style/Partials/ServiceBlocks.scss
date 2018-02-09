@@ -15,9 +15,6 @@
             }
         }
 
-        h4 {
-        }
-
         p {
             color: $gray;
             font-size: 0.8rem;
@@ -27,6 +24,39 @@
             opacity: 0;
             transform: translateX(-10px);
             transition: $transition;
+        }
+    }
+}
+@include phones {
+    .service-blocks {
+        h2 {
+            margin-bottom: 5px;
+        }
+
+        .service-links {
+            display: block;
+
+            &:hover {
+                span {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            h4 {
+                margin-top: 15px;
+                margin-bottom:5px;
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 0;
+            }
+
+            span {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
     }
 }

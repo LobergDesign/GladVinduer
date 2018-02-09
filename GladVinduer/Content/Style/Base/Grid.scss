@@ -156,6 +156,7 @@ $section-height: 75vh;
         }
     }
 }
+
 .umb-grid {
     .img-overlay {
         position: relative;
@@ -272,6 +273,7 @@ $section-height: 75vh;
         padding: 50px 0 40px;
     }
 }
+
 @include phones {
     .main-pages {
         padding: 20px 0 30px;
@@ -291,6 +293,52 @@ $section-height: 75vh;
                 margin-top: 15px;
                 margin-bottom: 15px;
             }
+        }
+    }
+
+    .fullwidth-tinted {
+        padding: 25px 0;
+
+        p {
+            span {
+                font-size: 12px;
+            }
+        }
+
+        h2 {
+            font-size: 14px;
+            margin-top: 2px;
+        }
+
+        a {
+            font-size: 12px;
+        }
+
+        h3 {
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .contact-right-side {
+            a {
+                margin-bottom: 0;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .payment {
+        padding: 25px 0;
+
+        .mobilepay {
+            width: 100px;
+            margin-top: 15px;
+        }
+
+        h2 {
+            margin-top: 2px;
+            font-size: 14px;
+            margin-bottom: 10px;
         }
     }
 }

@@ -37,19 +37,22 @@
             <div class="col-lg-5 col-md-6 col-sm-7">
                 <div class="top-section-right data-show-visible">
                     <div class="row">
-                        <div class="col-xs-5">
-                            @if (Model.Content.EnvironmentFirst != null)
-                            {
-                                <p>@Model.Content.EnvironmentFirst</p>
-                            }
-                        </div>
-                        <div class="col-xs-5">
-                            @if (Model.Content.EnvironmentFirst != null)
-                            {
-                                <p>@Model.Content.EnvironmentFirst</p>
-                            }
 
-                        </div>
+                        @if (Model.Content.EnvironmentFirst != null)
+                        {
+                            <div class="col-xs-5">
+                                <p>@Model.Content.EnvironmentFirst</p>
+                            </div>
+                        }
+
+
+                        @if (Model.Content.EnvironmentSecond != null)
+                        {
+                            <div class="col-xs-5">
+                                <p>@Model.Content.EnvironmentSecond</p>
+                            </div>
+                        }
+
                         <div class="col-xs-2 items-right">
                             @if (Model.Content.EnvironmentImage != null)
                             {
@@ -66,35 +69,37 @@
 @Html.Partial("_FrontpageCarousel")
 <div class="container">
     <div class="custom-grid-section">
-        <div class="first-section">
-            <div class="row">
-                <div class="col-sm-4 col-xs-12 data-show-visible">
-                    @if (Model.Content.AboutHeadline != null)
-                    {
-                        <h2>@Model.Content.AboutHeadline</h2>
-                    }
+        @if (Model.Content.AboutHeadline != null) { 
+            <div class="first-section">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12 data-show-visible">
+                        @if (Model.Content.AboutHeadline != null)
+                        {
+                            <h2>@Model.Content.AboutHeadline</h2>
+                            }
 
-                </div>
-                <div class="col-sm-7 col-sm-push-1 col-xs-12 data-show-visible">
-                    @if (Model.Content.AboutBodytext != null)
-                    {
-                        @Model.Content.AboutBodytext
-                    }
+                    </div>
+                    <div class="col-sm-7 col-sm-push-1 col-xs-12 data-show-visible">
+                        @if (Model.Content.AboutBodytext != null)
+                        {
+                            @Model.Content.AboutBodytext
+                        }
 
 
-                    @if (Model.Content.AboutLink != null)
-                    {
-                        <a class="main-link" href="@Model.Content.AboutLink.Url">Læs mere</a>
-                    }
+                        @if (Model.Content.AboutLink != null)
+                        {
+                            <a class="main-link" href="@Model.Content.AboutLink.Url">Læs mere</a>
+                        }
 
+                    </div>
                 </div>
             </div>
-        </div>
-        @Html.Partial("_Services")
+            }
+            @Html.Partial("_Services")
 
-        @*@Html.Partial("_GetAllServices")*@
+            @*@Html.Partial("_GetAllServices")*@
+        </div>
     </div>
-</div>
-<div class="grid frontpage-gridsection">
-    @CurrentPage.GetGridHtml("gridContent")
-</div>
+    <div class="grid frontpage-gridsection">
+        @CurrentPage.GetGridHtml("gridContent")
+    </div>

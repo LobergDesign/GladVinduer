@@ -18,3 +18,19 @@ footer {
         height: 44px;
     }
 }
+@include phones {
+    footer {
+        padding: 30px 0 85px;
+
+        span, a {
+            font-size: 13px;
+        }
+
+        svg {
+            width: 85px;
+            height: 34px;
+            @include center-x;
+            top:25px;
+        }
+    }
+}
